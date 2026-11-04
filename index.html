@@ -296,19 +296,52 @@ img{max-width:100%;height:auto}
 .language-switch{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:34px;padding:0 9px;border:1px solid #c9b894;color:#59664f;font:600 10px Arial,sans-serif;letter-spacing:1px;direction:ltr}
 .language-switch:hover{background:#59664f;color:#fff;border-color:#59664f}
 @media(max-width:900px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.person-photo{height:clamp(220px,38vw,300px)}}
-@media(max-width:680px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.person-photo{height:220px;aspect-ratio:4/5}.hero-photo{width:88%}.about-image img{height:350px}.service img{height:235px}}</style>
+@media(max-width:680px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.person-photo{height:220px;aspect-ratio:4/5}.hero-photo{width:88%}.about-image img{height:350px}.service img{height:235px}}
+/* Refined identity, language control and cinematic navigation */
+.logo.wordmark-logo{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:0;min-width:132px}
+.logo.wordmark-logo .logo-title{font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:500;line-height:1.05;letter-spacing:-.7px;color:#30362d;direction:ltr}
+.logo.wordmark-logo .logo-sub{font-family:'Vazirmatn',sans-serif;font-size:9px;font-weight:400;letter-spacing:0;line-height:1.7;color:#85877e;margin-top:5px;direction:rtl;white-space:nowrap}
+.language-menu{position:relative;z-index:42;direction:rtl}
+.language-menu details{position:relative}
+.language-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;min-width:82px;height:40px;padding:0 13px;border:1px solid #d8d2c5;background:#fff;color:#454b41;font-size:12px;font-weight:500;transition:background .25s,border-color .25s,color .25s}
+.language-menu summary::-webkit-details-marker{display:none}
+.language-menu summary:after{content:"";width:6px;height:6px;border-right:1px solid #8c806b;border-bottom:1px solid #8c806b;transform:rotate(45deg) translateY(-2px);transition:transform .3s}
+.language-menu details[open] summary{border-color:#b49a72;background:#fbfaf7}
+.language-menu details[open] summary:after{transform:rotate(225deg) translate(-2px,-1px)}
+.language-options{position:absolute;top:calc(100% + 9px);right:0;min-width:142px;padding:7px;background:#fff;border:1px solid #e9e5dc;box-shadow:0 18px 38px #25292318;display:grid;gap:2px;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transform-origin:top right;transition:opacity .28s ease,transform .38s cubic-bezier(.2,.75,.25,1),visibility 0s linear .38s}
+.language-menu details[open] .language-options{opacity:1;visibility:visible;transform:translateY(0) scale(1);transition-delay:0s}
+.language-options a,.language-options .current-language{display:block;padding:9px 11px;font-size:11px;color:#62665c;white-space:nowrap}
+.language-options a:hover{background:#f5f3ed;color:#343c31}
+.language-options .current-language{color:#59664f;background:#f7f7f3;font-weight:600}
+.hamb{transition:transform .45s cubic-bezier(.2,.8,.2,1),color .25s}
+.hamb[aria-expanded="true"]{transform:rotate(90deg);color:#9c8053}
+@media(max-width:680px){
+ .header{z-index:50}
+ .nav{position:relative}
+ .nav-cta{gap:9px}
+ .language-menu summary{min-width:74px;height:38px;padding:0 10px;font-size:11px}
+ .logo.wordmark-logo{min-width:0}
+ .logo.wordmark-logo .logo-title{font-size:27px}
+ .links{display:flex;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-15px) scale(.985);transform-origin:top center;transition:opacity .34s ease,transform .48s cubic-bezier(.2,.8,.2,1),visibility 0s linear .48s;max-height:calc(100dvh - 82px);overflow-y:auto}
+ .links.open{display:flex;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0) scale(1);transition-delay:0s}
+ .links a{opacity:0;transform:translateY(-7px);transition:opacity .28s ease,transform .38s cubic-bezier(.2,.8,.2,1)}
+ .links.open a{opacity:1;transform:translateY(0)}
+ .links.open a:nth-child(1){transition-delay:.04s}.links.open a:nth-child(2){transition-delay:.08s}.links.open a:nth-child(3){transition-delay:.12s}.links.open a:nth-child(4){transition-delay:.16s}.links.open a:nth-child(5){transition-delay:.20s}
+}
+@media(prefers-reduced-motion:reduce){.links,.links a,.hamb,.language-options,.language-menu summary:after{transition:none!important;transform:none!important}}
+</style>
 </head>
 <body>
 <div class="announcement">مراقبت آگاهانه، زیبایی در تعادل <b>✦</b> همراه شما از اولین مشاوره</div>
 <header class="header"><div class="wrap nav">
-<a class="logo" href="#home" aria-label="اِلَن کلینیک"><span class="logo-symbol">ا</span><span><span class="logo-title">اِلَن کلینیک</span><span class="logo-sub">ELAN SKIN & BEAUTY</span></span></a>
+<a class="logo wordmark-logo" href="#home" aria-label="Élan"><span class="logo-title">Élan</span><span class="logo-sub">کلینیک پوست و زیبایی</span></a>
 <nav class="links" id="links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#team">تیم تخصصی</a><a href="#journey">مراحل مراجعه</a><a href="faq.html">پرسش‌های متداول</a></nav>
-<div class="nav-cta"><a class="phone" href="#contact">۰۲۱ ــ ۰۰۰۰ ۰۰۰۰</a><a class="btn" href="#booking">رزرو مشاوره <span>↗</span></a><a class="language-switch" href="en/index.html" lang="en" aria-label="Switch to English">EN</a><button class="hamb" id="hamb" aria-label="باز کردن منو" aria-expanded="false">☰</button></div>
+<div class="nav-cta"><a class="phone" href="#contact">۰۲۱ ــ ۰۰۰۰ ۰۰۰۰</a><a class="btn" href="#booking">رزرو مشاوره <span>↗</span></a><div class="language-menu"><details><summary aria-label="انتخاب زبان">زبان</summary><div class="language-options"><span class="current-language" aria-current="true">فارسی</span><a href="en/index.html" lang="en">English</a></div></details></div><button class="hamb" id="hamb" aria-label="باز کردن منو" aria-expanded="false">☰</button></div>
 </div></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid">
 <div class="hero-copy reveal"><div class="kicker">کلینیک تخصصی پوست و زیبایی</div><h1>زیباییِ شما،<br>در <em>تعادل</em> معنا می‌شود.</h1><p>در اِلَن، قرار نیست شبیه کسی دیگر شوید. اینجا با شناخت نیازهای پوست شما، به انتخابی آگاهانه و مراقبتی متناسب با خودتان می‌رسیم؛ با آرامش، دقت و احترام.</p><div class="actions"><a class="btn" href="#contact">برای مشاوره اقدام کنید <span>↗</span></a><a class="btn btn-outline" href="#services">مشاهده خدمات</a></div><div class="micro">زیبایی طبیعی، تصمیم آگاهانه، مراقبت مسئولانه</div></div>
-<div class="hero-photo reveal"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1100&q=85" alt="فضای داخلی روشن و آرام کلینیک"><div class="seal"><div><b>ا</b>مراقبت با<br>توجه و دقت</div></div><div class="photo-note"><strong>هر پوست، یک داستان منحصربه‌فرد</strong>برای انتخابی متناسب با شما</div></div>
+<div class="hero-photo reveal"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1100&q=85" alt="فضای داخلی روشن و آرام کلینیک"></div><div class="photo-note"><strong>هر پوست، یک داستان منحصربه‌فرد</strong>برای انتخابی متناسب با شما</div></div>
 </div></section>
 <section class="proof"><div class="wrap proof-grid">
 <div class="proof-item"><span class="proof-icon">✧</span><div><strong>مشاوره اختصاصی</strong><small>با توجه به نیاز شما</small></div></div>
@@ -356,7 +389,7 @@ img{max-width:100%;height:auto}
 </main>
 
 <footer class="footer"><div class="wrap"><div class="footer-grid">
-<div><a class="logo" href="#home"><span class="logo-symbol">ا</span><span><span class="logo-title">اِلَن کلینیک</span><span class="logo-sub">ELAN SKIN & BEAUTY</span></span></a><p>مراقبت آگاهانه از پوست، با نگاهی علمی، انسانی و متناسب با هر فرد.</p></div>
+<div><a class="logo wordmark-logo" href="#home" aria-label="Élan"><span class="logo-title">Élan</span><span class="logo-sub">کلینیک پوست و زیبایی</span></a><p>مراقبت آگاهانه از پوست، با نگاهی علمی، انسانی و متناسب با هر فرد.</p></div>
 <div><h4>دسترسی سریع</h4><div class="footer-links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#team">تیم تخصصی</a><a href="faq.html">پرسش‌های متداول</a></div></div>
 <div><h4>ارتباط با ما</h4><div class="footer-links"><a href="#contact">درخواست مشاوره</a><a href="#contact">نشانی کلینیک</a><a href="#contact">ساعات کاری</a></div></div>
 <div><h4>شبکه‌های اجتماعی</h4><div class="footer-links"><a href="#contact">اینستاگرام کلینیک ــ پس از اتصال</a><a href="#contact">تماس ــ پس از تکمیل اطلاعات</a></div></div>
@@ -390,8 +423,8 @@ img{max-width:100%;height:auto}
 </section>
 <script>
 const hamb=document.getElementById('hamb'),links=document.getElementById('links');
-hamb.addEventListener('click',()=>{const open=links.classList.toggle('open');hamb.setAttribute('aria-expanded',String(open));hamb.textContent=open?'×':'☰';document.body.classList.toggle('lock',open)});
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');hamb.setAttribute('aria-expanded','false');hamb.textContent='☰';document.body.classList.remove('lock')}));
+const closeMenu=()=>{if(!hamb||!links)return;links.classList.remove('open');hamb.setAttribute('aria-expanded','false');hamb.textContent='☰';document.body.classList.remove('lock')};
+if(hamb&&links){hamb.addEventListener('click',()=>{const open=!links.classList.contains('open');links.classList.toggle('open',open);hamb.setAttribute('aria-expanded',String(open));hamb.textContent=open?'×':'☰';document.body.classList.toggle('lock',open)});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();document.querySelectorAll('.language-menu details[open]').forEach(d=>d.open=false)}});document.addEventListener('click',e=>{if(!e.target.closest('.language-menu'))document.querySelectorAll('.language-menu details[open]').forEach(d=>d.open=false);if(!e.target.closest('.nav')&&links.classList.contains('open'))closeMenu()});}
 if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el))}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'))}
 document.getElementById('booking').addEventListener('submit',e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;const s=document.getElementById('status');s.textContent='درخواست شما در این نسخه نمایشی ثبت نمی‌شود؛ برای دریافت واقعی اطلاعات باید سامانه رزرو متصل شود.';s.style.display='block';e.currentTarget.reset()});
 </script>
