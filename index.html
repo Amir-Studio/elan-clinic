@@ -12,7 +12,9 @@
 <title>اِلَن | کلینیک تخصصی پوست و زیبایی</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/Amir-Studio/fonts@main/Vazirmatn-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#f4f0e8;--paper2:#ebe6dc;--white:#fffdf8;--ink:#292c26;--muted:#77796f;--olive:#59664f;--olive2:#78836c;--gold:#b69b70;--line:#dcd6ca;--serif:'Playfair Display',Georgia,serif;--fa:'Vazirmatn',sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--fa);line-height:1.9}body.lock{overflow:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,calc(100% - 52px));margin:auto}.announcement{background:var(--ink);color:#e9e2d5;text-align:center;padding:7px 15px;font-size:10px;letter-spacing:.2px}.announcement b{color:#d9c19a;font-weight:500}.header{height:82px;position:sticky;top:0;z-index:30;background:#f4f0e8ed;backdrop-filter:blur(14px);border-bottom:1px solid #292c2610}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:11px}.logo-symbol{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font:25px var(--serif);color:var(--olive)}.logo-title{font-size:17px;font-weight:600;letter-spacing:1px}.logo-sub{display:block;font:9px var(--serif);direction:ltr;letter-spacing:2.3px;color:var(--muted);margin-top:-4px}.links{display:flex;align-items:center;gap:27px;font-size:12px;color:#5e6058}.links a:hover{color:var(--olive)}.nav-cta{display:flex;align-items:center;gap:15px}.phone{direction:ltr;font:12px Arial;color:#62665c}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:13px 22px;background:var(--olive);border:1px solid var(--olive);color:white;font-size:12px;transition:.25s}.btn:hover{background:#414c3c;transform:translateY(-2px)}.btn-outline{background:transparent;color:var(--ink);border-color:#aaa99d}.btn-outline:hover{color:white}.hamb{display:none;border:0;background:none;font-size:24px;color:var(--ink)}
@@ -118,6 +120,24 @@ body{background:#fff;color:var(--ink);font-size:14px}
  .studio-link{justify-content:center}.studio-detail{font-size:10px}
  .footer-bottom{align-items:flex-start}
 }
+
+
+/* Typeface system: self-hosted Vazirmatn variable + restrained Latin editorial serif */
+@font-face{
+ font-family:"VazirmatnLocal";
+ src:url("https://cdn.jsdelivr.net/gh/Amir-Studio/fonts@main/Vazirmatn-VariableFont_wght.ttf") format("truetype");
+ font-style:normal;
+ font-weight:100 900;
+ font-display:swap;
+}
+:root{--fa:"VazirmatnLocal","Vazirmatn",Tahoma,sans-serif}
+html{font-synthesis:none}
+body{font-family:var(--fa);font-weight:400;font-feature-settings:"kern","liga","calt";text-rendering:optimizeLegibility}
+h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
+.hero h1{font-weight:400;line-height:1.52;letter-spacing:-.8px}
+.section-head h2,.about-copy h2,.contact-copy h2{font-weight:500;letter-spacing:-.45px}
+.hero-copy>p,.section-head p,.about-copy p,.contact-copy p{font-weight:400}
+.links,.btn,.field,.faq-list summary{font-weight:500}
 
 </style>
 </head>
