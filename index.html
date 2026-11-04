@@ -248,6 +248,23 @@ h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
 .studio-bottomline a{font-family:"Vazirmatn",sans-serif;font-size:10px;letter-spacing:0;color:#c6a66b}
 @media(max-width:900px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.studio-panel{grid-template-columns:1fr 1fr}.studio-copy{border:0;padding:0}.studio-contact{grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.studio-bottomline{grid-column:1/-1}}
 @media(max-width:680px){.team-grid{grid-template-columns:1fr 1fr;gap:13px}.person-photo{height:220px}.person h3{font-size:13px}.person p{font-size:10px}.studio-signature{padding:22px 0 26px}.studio-panel{grid-template-columns:1fr;padding:25px 20px;gap:20px}.studio-brand-row{gap:12px}.studio-logo-img{width:48px;height:48px}.studio-wordmark{font-size:20px}.studio-copy{border-top:1px solid rgba(198,166,107,.2);padding:17px 0 0}.studio-copy h2{font-size:21px}.studio-contact{grid-template-columns:1fr;gap:12px}.studio-bottomline{flex-direction:column;gap:10px;line-height:1.8}}
+
+/* Responsive image safety: keep every image inside its own layout box */
+img{max-width:100%;height:auto;}
+.hero-photo,.about-image,.service,.person-photo,.gallery-grid{min-width:0;overflow:hidden;}
+.hero-photo{width:100%;max-width:100%;}
+.hero-photo img{display:block;width:100%;height:100%;max-width:100%;object-fit:cover;}
+.about-image img,.service img,.gallery-grid img{display:block;max-width:100%;width:100%;object-fit:cover;}
+.team-grid{grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;}
+.person{min-width:0;overflow:hidden;}
+.person-photo{width:100%;height:clamp(230px,27vw,330px);aspect-ratio:4/5;overflow:hidden;}
+.person-photo img{width:100%;height:100%;max-width:100%;object-fit:cover;object-position:center 24%;}
+.gallery-grid{min-width:0;}
+.gallery-grid img{min-width:0;min-height:0;}
+.language-switch{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:34px;padding:0 9px;border:1px solid #c9b894;color:#59664f;font:600 10px Arial,sans-serif;letter-spacing:1px;direction:ltr;transition:.2s}
+.language-switch:hover{background:#59664f;color:#fff;border-color:#59664f}
+@media(max-width:900px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.person-photo{height:clamp(220px,38vw,300px)}}
+@media(max-width:680px){.hero-photo{width:88%;}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.person-photo{height:220px;aspect-ratio:4/5}.gallery-grid img{max-width:100%;}}
 </style>
 </head>
 <body>
@@ -255,7 +272,7 @@ h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
 <header class="header"><div class="wrap nav">
 <a class="logo" href="#home" aria-label="اِلَن کلینیک"><span class="logo-symbol">ا</span><span><span class="logo-title">اِلَن کلینیک</span><span class="logo-sub">ELAN SKIN & BEAUTY</span></span></a>
 <nav class="links" id="links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#team">تیم تخصصی</a><a href="#journey">مراحل مراجعه</a><a href="faq.html">پرسش‌های متداول</a></nav>
-<div class="nav-cta"><a class="phone" href="#contact">۰۲۱ ــ ۰۰۰۰ ۰۰۰۰</a><a class="btn" href="#booking">رزرو مشاوره <span>↗</span></a><button class="hamb" id="hamb" aria-label="باز کردن منو" aria-expanded="false">☰</button></div>
+<div class="nav-cta"><a class="phone" href="#contact">۰۲۱ ــ ۰۰۰۰ ۰۰۰۰</a><a class="btn" href="#booking">رزرو مشاوره <span>↗</span></a><a class="language-switch" href="en/index.html" lang="en" aria-label="Switch to English">EN</a><button class="hamb" id="hamb" aria-label="باز کردن منو" aria-expanded="false">☰</button></div>
 </div></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid">
