@@ -329,19 +329,56 @@ img{max-width:100%;height:auto}
  .links.open a:nth-child(1){transition-delay:.04s}.links.open a:nth-child(2){transition-delay:.08s}.links.open a:nth-child(3){transition-delay:.12s}.links.open a:nth-child(4){transition-delay:.16s}.links.open a:nth-child(5){transition-delay:.20s}
 }
 @media(prefers-reduced-motion:reduce){.links,.links a,.hamb,.language-options,.language-menu summary:after{transition:none!important;transform:none!important}}
+
+/* Persian layout refinement */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{overflow-x:hidden}
+.wrap{width:min(1160px,calc(100% - 48px));margin-inline:auto}
+.hero{padding:clamp(58px,8vw,104px) 0 clamp(55px,7vw,88px)}
+.hero-grid{display:block;min-height:0;max-width:900px;margin-inline:auto}
+.hero-copy{text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero-copy .kicker{justify-content:center}
+.hero h1{font-size:clamp(32px,4.2vw,54px);line-height:1.35;letter-spacing:-1.2px;margin:18px 0 20px;white-space:normal;text-wrap:balance}
+.hero h1 em{font-style:normal;font-family:'Playfair Display',Georgia,serif;font-weight:500;white-space:nowrap}
+.hero-copy>p{max-width:680px;margin-inline:auto;line-height:2.15}
+.hero .actions{justify-content:center;margin-top:22px}
+.hero .micro{justify-content:center;margin-top:26px}
+.about-grid{grid-template-columns:minmax(0,1fr);gap:0;max-width:850px;margin-inline:auto}
+.about-copy{max-width:760px}
+.about-copy h2,.about-copy p{text-wrap:pretty}
+.nav-booking{display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;padding:10px 15px;background:var(--olive);color:#fff;border:1px solid var(--olive);font-size:11px;transition:background .35s ease,transform .45s cubic-bezier(.2,.8,.2,1)}
+.nav-booking:hover{background:#414c3c;transform:translateY(-2px)}
+.links{gap:clamp(12px,1.6vw,22px)}
+.links a{transition:color .3s ease}
+.reveal{transition:opacity .85s ease,transform .95s cubic-bezier(.2,.75,.25,1)}
+.btn,.nav-booking,.language-menu summary{transition:all .35s cubic-bezier(.2,.75,.25,1)}
+@media(max-width:900px){.nav-booking{padding:9px 11px;font-size:10px}.links{gap:12px}.hero h1{font-size:clamp(32px,5vw,46px)}}
+@media(max-width:680px){
+ .wrap{width:calc(100% - 36px)}
+ .hero{padding:54px 0 58px}
+ .hero-grid{min-height:0}
+ .hero h1{font-size:clamp(30px,8vw,39px);line-height:1.45;letter-spacing:-.7px}
+ .hero-copy>p{font-size:12px}
+ .nav-booking{justify-content:center;margin-top:12px;padding:13px 12px;border:0;border-top:1px solid var(--line);background:transparent;color:var(--olive);font-size:12px}
+ .links.open{gap:0}
+ .links.open a,.links.open .nav-booking{opacity:1;transform:translateY(0)}
+ .about-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.btn,.nav-booking{transition:none!important}}
 </style>
 </head>
 <body>
 <div class="announcement">مراقبت آگاهانه، زیبایی در تعادل <b>✦</b> همراه شما از اولین مشاوره</div>
 <header class="header"><div class="wrap nav">
 <a class="logo wordmark-logo" href="#home" aria-label="Élan"><span class="logo-title">Élan</span><span class="logo-sub">کلینیک پوست و زیبایی</span></a>
-<nav class="links" id="links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#team">تیم تخصصی</a><a href="#journey">مراحل مراجعه</a><a href="faq.html">پرسش‌های متداول</a></nav>
+<nav class="links" id="links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#team">تیم تخصصی</a><a href="#journey">مراحل مراجعه</a><a href="faq.html">پرسش‌های متداول</a><a class="nav-booking" href="#booking">رزرو مشاوره <span>↗</span></a></nav>
 <div class="nav-cta"><a class="phone" href="#contact">۰۲۱ ــ ۰۰۰۰ ۰۰۰۰</a><a class="btn" href="#booking">رزرو مشاوره <span>↗</span></a><div class="language-menu"><details><summary aria-label="انتخاب زبان">زبان</summary><div class="language-options"><span class="current-language" aria-current="true">فارسی</span><a href="en/index.html" lang="en">English</a></div></details></div><button class="hamb" id="hamb" aria-label="باز کردن منو" aria-expanded="false">☰</button></div>
 </div></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid">
-<div class="hero-copy reveal"><div class="kicker">کلینیک تخصصی پوست و زیبایی</div><h1>زیباییِ شما،<br>در <em>تعادل</em> معنا می‌شود.</h1><p>در اِلَن، قرار نیست شبیه کسی دیگر شوید. اینجا با شناخت نیازهای پوست شما، به انتخابی آگاهانه و مراقبتی متناسب با خودتان می‌رسیم؛ با آرامش، دقت و احترام.</p><div class="actions"><a class="btn" href="#contact">برای مشاوره اقدام کنید <span>↗</span></a><a class="btn btn-outline" href="#services">مشاهده خدمات</a></div><div class="micro">زیبایی طبیعی، تصمیم آگاهانه، مراقبت مسئولانه</div></div>
-<div class="hero-photo reveal"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1100&q=85" alt="فضای داخلی روشن و آرام کلینیک"></div><div class="photo-note"><strong>هر پوست، یک داستان منحصربه‌فرد</strong>برای انتخابی متناسب با شما</div></div>
+<div class="hero-copy reveal"><div class="kicker">کلینیک تخصصی پوست و زیبایی</div><h1>کلینیک تخصصی پوست و زیبایی <em>Élan</em></h1><p>در اِلَن، قرار نیست شبیه کسی دیگر شوید. اینجا با شناخت نیازهای پوست شما، به انتخابی آگاهانه و مراقبتی متناسب با خودتان می‌رسیم؛ با آرامش، دقت و احترام.</p><div class="actions"><a class="btn btn-outline" href="#services">مشاهده خدمات <span>↗</span></a></div><div class="micro">زیبایی طبیعی، تصمیم آگاهانه، مراقبت مسئولانه</div></div>
+</div>
 </div></section>
 <section class="proof"><div class="wrap proof-grid">
 <div class="proof-item"><span class="proof-icon">✧</span><div><strong>مشاوره اختصاصی</strong><small>با توجه به نیاز شما</small></div></div>
