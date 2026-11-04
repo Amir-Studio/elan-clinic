@@ -411,6 +411,31 @@ body{overflow-x:hidden}
 }
 @media(max-width:350px){.hero h1{font-size:23px}}
 
+
+/* Doctor section — editorial, image-free trust presentation */
+.team-grid{display:none}
+.team-promise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;margin-top:38px}
+.team-promise{display:grid;grid-template-columns:44px 1fr;gap:15px;padding:24px 0;border-top:1px solid #e5e6df;align-items:start}
+.team-promise-no{font:24px var(--serif);color:var(--gold);direction:ltr}
+.team-promise h3{font-size:15px;font-weight:600;margin:1px 0 9px;color:var(--ink)}
+.team-promise p{font-size:12px;line-height:2.2;color:var(--muted);margin:0;max-width:460px}
+#team .sample-note{margin-top:24px;padding:13px 16px;background:#f7f7f4;border-right:2px solid #b49a72;line-height:2}
+#contact{position:relative;isolation:isolate;padding-bottom:112px;overflow:visible;clear:both}
+#contact .contact-grid{align-items:stretch;min-width:0}
+#contact .form{position:relative;z-index:1;min-width:0;height:fit-content;overflow:hidden;margin:0}
+#contact .form-hint{overflow-wrap:anywhere}
+.footer{position:relative;z-index:0;clear:both;margin-top:0}
+.studio-signature{position:relative;clear:both;padding-top:0;margin-top:0}
+@media(max-width:680px){
+ .team-promise-grid{grid-template-columns:1fr;gap:0;margin-top:24px}
+ .team-promise{grid-template-columns:36px 1fr;padding:19px 0;gap:12px}
+ .team-promise h3{font-size:14px}
+ .team-promise p{font-size:11px}
+ #contact{padding-bottom:76px}
+ #contact .contact-grid{gap:28px}
+ #contact .form{width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -446,11 +471,13 @@ body{overflow-x:hidden}
 <div><div class="kicker">باور ما</div><h2>قولِ غیرممکن نمی‌دهیم؛<br>با دقت کنار شما هستیم.</h2><p>هر فرد شرایط متفاوتی دارد. به همین دلیل از وعده‌های تضمینی فاصله می‌گیریم و بر ارزیابی تخصصی، توضیح شفاف و مراقبت مسئولانه تمرکز می‌کنیم.</p></div>
 <div class="values"><div class="value"><b>۰۱</b><strong>شنیدن و شناخت</strong><small>درک نیاز و انتظار پیش از هر تصمیم</small></div><div class="value"><b>۰۲</b><strong>شفافیت در انتخاب</strong><small>توضیح گزینه‌ها و محدودیت‌ها</small></div><div class="value"><b>۰۳</b><strong>تخصص و دقت</strong><small>ارزیابی توسط فرد واجد صلاحیت</small></div><div class="value"><b>۰۴</b><strong>همراهی و پیگیری</strong><small>توجه به مراقبت‌های پس از خدمت</small></div></div>
 </div></div></section>
-<section class="section" id="team"><div class="wrap"><div class="section-head reveal"><div class="kicker">تیم اِلَن</div><h2>اعتماد، با تخصص ساخته می‌شود.</h2><p>معرفی اعضای تیم باید با نام، تصویر، مدرک و سوابق واقعی و تأییدشده تکمیل شود.</p></div>
-<div class="team-grid">
-<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه پزشک" loading="lazy"><span class="person-index">01</span></div><h3>پزشک متخصص پوست</h3><p>معرفی نمونه؛ نام، مدرک و سوابق پزشک واقعی باید جایگزین شود.</p></article>
-<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه پزشک مشاور" loading="lazy"><span class="person-index">02</span></div><h3>پزشک مشاور</h3><p>معرفی نمونه؛ عنوان تخصص و اطلاعات حرفه‌ای پس از تأیید درج می‌شود.</p></article>
-</div><p class="sample-note">تصاویر این بخش عکس‌های نمونه هستند و اعضای واقعی کلینیک نیستند. نام، تصویر، تخصص و سوابق باید با اطلاعات واقعی و مجاز جایگزین شوند.</p>
+<section class="section" id="team"><div class="wrap"><div class="section-head reveal"><div class="kicker">تیم پزشکی اِلَن</div><h2>تخصص، تجربه و توجهی که می‌توانید به آن اعتماد کنید.</h2><p>در اِلَن، مراقبت از پوست با نگاه تخصصی، ارزیابی دقیق و توجه به ویژگی‌های منحصربه‌فرد هر مراجعه‌کننده معنا پیدا می‌کند.</p></div>
+<div class="team-promise-grid">
+<article class="team-promise reveal"><span class="team-promise-no">01</span><div><h3>تجربه در کنار دانش تخصصی</h3><p>رویکردی متکی بر دانش پزشکی و تجربه بالینی؛ با انتخاب روش‌هایی که برای شرایط هر فرد مناسب و قابل‌دفاع باشند.</p></div></article>
+<article class="team-promise reveal"><span class="team-promise-no">02</span><div><h3>ارزیابی پیش از هر تصمیم</h3><p>هیچ مسیر مراقبتی بدون شناخت نیازها، بررسی شرایط پوست و گفت‌وگوی روشن درباره انتظارات آغاز نمی‌شود.</p></div></article>
+<article class="team-promise reveal"><span class="team-promise-no">03</span><div><h3>صداقت و شفافیت در مشاوره</h3><p>مزایا، محدودیت‌ها و مراقبت‌های لازم با زبانی روشن توضیح داده می‌شوند؛ بدون وعده نتیجه قطعی یا اغراق‌آمیز.</p></div></article>
+<article class="team-promise reveal"><span class="team-promise-no">04</span><div><h3>همراهی و پیگیری مسئولانه</h3><p>توجه به مراجعه‌کننده به پایان جلسه محدود نیست؛ راهنمایی و پیگیری متناسب با مسیر مراقبت اهمیت دارد.</p></div></article>
+</div><p class="sample-note">برای انتشار نسخه‌ی واقعی، نام پزشکان، تخصص‌ها و سوابق حرفه‌ای باید با اطلاعات معتبر و قابل‌استعلام تکمیل شوند.</p>
 </div></section>
 <section class="section steps-section" id="journey"><div class="wrap"><div class="section-head reveal"><div class="kicker">مراحل مراجعه</div><h2>از اولین تماس تا مراقبت پیوسته</h2><p>یک مسیر روشن و قابل‌درک، تا در هر مرحله بدانید چه اتفاقی می‌افتد.</p></div>
 <div class="steps"><div class="step reveal"><b>۰۱</b><h3>ثبت درخواست</h3><p>زمان مناسب خود را برای تماس یا مشاوره اعلام می‌کنید.</p></div><div class="step reveal"><b>۰۲</b><h3>گفت‌وگوی اولیه</h3><p>نیازها و پرسش‌های شما شنیده و راهنمایی اولیه ارائه می‌شود.</p></div><div class="step reveal"><b>۰۳</b><h3>ارزیابی تخصصی</h3><p>متخصص شرایط شما را بررسی و گزینه‌ها را توضیح می‌دهد.</p></div><div class="step reveal"><b>۰۴</b><h3>مراقبت و پیگیری</h3><p>برنامه مورد توافق اجرا و راهنمایی‌های لازم ارائه می‌شود.</p></div></div>
