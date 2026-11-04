@@ -8,8 +8,10 @@
 <meta name="description" content="نمونه‌کار طراحی وب‌سایت کلینیک اِلَن توسط AmirStudio؛ طراحی فارسی، راست‌چین و واکنش‌گرا برای معرفی خدمات و تجربه مراجعه.">
 <meta name="author" content="AmirStudio">
 <link rel="canonical" href="https://amir-studio.github.io/elan-clinic/">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:url" content="https://amir-studio.github.io/elan-clinic/">
 <meta property="og:site_name" content="AmirStudio Portfolio">
+<meta property="og:image" content="https://amir-studio.github.io/elan-clinic/assets/og-cover.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Élan Clinic — Website Design Concept","url":"https://amir-studio.github.io/elan-clinic/","inLanguage":"fa","description":"نمونه‌کار طراحی وب‌سایت فارسی و راست‌چین برای کلینیک اِلَن.","creator":{"@type":"Organization","name":"AmirStudio","url":"https://amir-studio.github.io/Amir-Studio/"},"isPartOf":{"@type":"WebSite","name":"AmirStudio","url":"https://amir-studio.github.io/Amir-Studio/"}}</script>
 <meta property="og:title" content="اِلَن | زیبایی در تعادل">
@@ -171,13 +173,45 @@ h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
 .person h3{margin-top:13px}
 @media(max-width:900px){.studio-panel{grid-template-columns:1fr;gap:20px}.studio-copy{border:0;border-top:1px solid rgba(198,166,107,.2);padding:18px 0 0}.studio-contact-inline{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){.studio-signature{padding:25px 0 30px}.studio-panel{padding:25px 20px;gap:18px}.studio-brand{gap:11px}.studio-logo-img{width:48px;height:48px}.studio-wordmark{font-size:19px}.studio-copy h2{font-size:21px}.studio-contact-inline{grid-template-columns:1fr}.person-visual{height:190px}}
+
+/* Visual rhythm refinement */
+.about-grid{background:#fbfaf7;padding:34px;gap:7%}
+.services{background:linear-gradient(180deg,#eeece5 0%,#f6f4ef 100%)}
+.manifesto-inner{background:#30372e;border:1px solid #59634f;box-shadow:0 25px 60px #20251d12}
+#team{background:linear-gradient(180deg,#f4f0e8 0%,#ece8df 100%);position:relative}
+#team .section-head{max-width:760px}
+.team-grid{gap:26px}
+.person{background:#fffdf8;border:1px solid #e1dbcf;padding:0 0 18px;transition:transform .35s,box-shadow .35s}
+.person:hover{transform:translateY(-6px);box-shadow:0 20px 45px #292c2612}
+.person-photo{height:345px;position:relative;overflow:hidden;background:#ddd8cd}
+.person-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:saturate(.78);transition:transform .6s}
+.person:hover .person-photo img{transform:scale(1.035)}
+.person-index{position:absolute;left:14px;top:14px;background:#f4f0e8e8;color:#59664f;padding:5px 9px;font:11px "Manrope",Arial,sans-serif;letter-spacing:1px}
+.person h3,.person p{margin-left:18px;margin-right:18px}
+.person h3{margin-top:15px}
+.person p{line-height:2}
+.sample-note{padding:12px 15px;border-right:2px solid var(--gold);background:#f7f4ed}
+.steps-section{background:#e9e5dc}
+.gallery-section{background:#f9f8f4;padding-top:105px;padding-bottom:110px}
+.gallery-section .section-head{display:grid;grid-template-columns:.8fr 1.2fr;align-items:end;gap:30px;max-width:none}
+.gallery-section .section-head h2{max-width:500px}
+.gallery-grid{grid-template-columns:1.25fr .8fr .8fr;grid-template-rows:250px 250px;gap:13px}
+.gallery-grid img{filter:saturate(.78);transition:filter .35s,transform .5s}
+.gallery-grid img:hover{filter:saturate(1);transform:scale(1.012)}
+.testimonials{position:relative;overflow:hidden}
+.testimonials:before{content:"É";position:absolute;left:2%;top:-110px;font:420px "Playfair Display",serif;color:#ffffff08;pointer-events:none}
+.contact{background:linear-gradient(135deg,#e7e2d7,#f0ede6)}
+.contact .form{box-shadow:0 20px 55px #292c2610}
+.studio-signature{margin-top:0}
+@media(max-width:900px){.person-photo{height:285px}.gallery-section .section-head{display:block}.gallery-grid{grid-template-rows:200px 200px}}
+@media(max-width:680px){.about-grid{padding:18px}.person-photo{height:230px}.gallery-section .section-head{display:block}.gallery-grid{grid-template-rows:180px 130px 130px}.gallery-section{padding-top:70px;padding-bottom:75px}}
 </style>
 </head>
 <body>
 <div class="announcement">مراقبت آگاهانه، زیبایی در تعادل <b>✦</b> همراه شما از اولین مشاوره</div>
 <header class="header"><div class="wrap nav">
 <a class="logo" href="#home" aria-label="اِلَن کلینیک"><span class="logo-symbol">ا</span><span><span class="logo-title">اِلَن کلینیک</span><span class="logo-sub">ELAN SKIN & BEAUTY</span></span></a>
-<nav class="links" id="links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#team">تیم تخصصی</a><a href="#journey">مراحل مراجعه</a><a href="#faq">پرسش‌های شما</a></nav>
+<nav class="links" id="links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#team">تیم تخصصی</a><a href="#journey">مراحل مراجعه</a><a href="faq.html">پرسش‌های متداول</a></nav>
 <div class="nav-cta"><a class="phone" href="#contact">۰۲۱ ــ ۰۰۰۰ ۰۰۰۰</a><a class="btn" href="#contact">رزرو مشاوره <span>↗</span></a><button class="hamb" id="hamb" aria-label="باز کردن منو" aria-expanded="false">☰</button></div>
 </div></header>
 <main>
@@ -208,23 +242,21 @@ h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
 </div></div></section>
 <section class="section" id="team"><div class="wrap"><div class="section-head reveal"><div class="kicker">تیم اِلَن</div><h2>اعتماد، با تخصص ساخته می‌شود.</h2><p>معرفی اعضای تیم باید با نام، تصویر، مدرک و سوابق واقعی و تأییدشده تکمیل شود.</p></div>
 <div class="team-grid">
-<article class="person reveal"><div class="person-visual" aria-hidden="true"><span>01</span><b>✳</b></div><h3>پزشک متخصص پوست</h3><p>نام، تصویر و اطلاعات حرفه‌ای پس از تأیید مجموعه درج می‌شود.</p></article>
-<article class="person reveal"><div class="person-visual" aria-hidden="true"><span>02</span><b>◈</b></div><h3>کارشناس مراقبت پوست</h3><p>عنوان و حوزه فعالیت مطابق اطلاعات واقعی تیم تکمیل خواهد شد.</p></article>
-<article class="person reveal"><div class="person-visual" aria-hidden="true"><span>03</span><b>⌁</b></div><h3>مشاور زیبایی</h3><p>سوابق و صلاحیت حرفه‌ای پس از بررسی و تأیید درج می‌شود.</p></article>
-</div><p class="sample-note">تصاویر و عنوان‌های این بخش نمونه نمایشی هستند و به افراد یا مدارک واقعی اشاره ندارند.</p>
+<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه یک پزشک مرد در پوشش پزشکی" loading="lazy"><span class="person-index">01</span></div><h3>پزشک متخصص پوست</h3><p>معرفی نمونه؛ نام، مدرک و سوابق پزشک واقعی باید جایگزین شود.</p></article>
+<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه پزشک در محیط درمانی" loading="lazy"><span class="person-index">02</span></div><h3>پزشک مشاور</h3><p>معرفی نمونه؛ عنوان تخصص و اطلاعات حرفه‌ای پس از تأیید درج می‌شود.</p></article>
+<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه یک پزشک زن" loading="lazy"><span class="person-index">03</span></div><h3>کارشناس مراقبت پوست</h3><p>معرفی نمونه؛ تصویر و صلاحیت حرفه‌ای باید با اطلاعات واقعی تطبیق داده شود.</p></article>
+</div><p class="sample-note">تصاویر این بخش عکس‌های نمونه هستند و اعضای واقعی کلینیک نیستند. نام، تصویر، تخصص و سوابق باید با اطلاعات واقعی و مجاز جایگزین شوند.</p>
 </div></section>
 <section class="section steps-section" id="journey"><div class="wrap"><div class="section-head reveal"><div class="kicker">مراحل مراجعه</div><h2>از اولین تماس تا مراقبت پیوسته</h2><p>یک مسیر روشن و قابل‌درک، تا در هر مرحله بدانید چه اتفاقی می‌افتد.</p></div>
 <div class="steps"><div class="step reveal"><b>۰۱</b><h3>ثبت درخواست</h3><p>زمان مناسب خود را برای تماس یا مشاوره اعلام می‌کنید.</p></div><div class="step reveal"><b>۰۲</b><h3>گفت‌وگوی اولیه</h3><p>نیازها و پرسش‌های شما شنیده و راهنمایی اولیه ارائه می‌شود.</p></div><div class="step reveal"><b>۰۳</b><h3>ارزیابی تخصصی</h3><p>متخصص شرایط شما را بررسی و گزینه‌ها را توضیح می‌دهد.</p></div><div class="step reveal"><b>۰۴</b><h3>مراقبت و پیگیری</h3><p>برنامه مورد توافق اجرا و راهنمایی‌های لازم ارائه می‌شود.</p></div></div>
 </div></section>
-<section class="section"><div class="wrap"><div class="section-head reveal"><div class="kicker">فضای کلینیک</div><h2>جزئیاتی برای یک تجربه آرام‌تر</h2><p>فضایی روشن، خلوت و خوشایند؛ جایی که از لحظه ورود، توجه به شما آغاز می‌شود.</p></div>
+<section class="section gallery-section"><div class="wrap"><div class="section-head reveal"><div class="kicker">فضای کلینیک</div><h2>جزئیاتی برای یک تجربه آرام‌تر</h2><p>فضایی روشن، خلوت و خوشایند؛ جایی که از لحظه ورود، توجه به شما آغاز می‌شود.</p></div>
 <div class="gallery-grid reveal"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=85" alt="فضای داخلی کلینیک"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85" alt="فضای مینیمال"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=85" alt="جزئیات دکوراسیون"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85" alt="فضای پذیرش"></div>
 </div></section>
 <section class="section testimonials"><div class="wrap"><div class="section-head reveal"><div class="kicker">تجربه مراجعان</div><h2>اعتماد، ارزشمندترین تجربه است.</h2><p>این بخش برای انتشار دیدگاه‌های واقعی و دارای رضایت مراجعان در نظر گرفته شده است.</p></div>
 <div class="quotes"><div class="quote reveal"><div class="stars">★★★★★</div><blockquote>در این قسمت تجربه واقعی مراجعه‌کننده درباره روند مشاوره و پاسخ‌گویی نمایش داده می‌شود.</blockquote><small>متن نمونه ــ جایگزین با نظر تأییدشده</small></div><div class="quote reveal"><div class="stars">★★★★★</div><blockquote>دیدگاه واقعی، با اجازه صاحب تجربه و بدون تغییر گمراه‌کننده منتشر خواهد شد.</blockquote><small>متن نمونه ــ جایگزین با نظر تأییدشده</small></div><div class="quote reveal"><div class="stars">★★★★★</div><blockquote>هیچ نظر یا امتیاز ساختگی نباید به‌عنوان تجربه واقعی مراجعان نمایش داده شود.</blockquote><small>راهنمای تکمیل محتوا</small></div></div>
 </div></section>
-<section class="section" id="faq"><div class="wrap faq-grid"><div class="section-head reveal"><div class="kicker">پرسش‌های متداول</div><h2>پیش از مراجعه، بدانید.</h2><p>پاسخ به چند پرسش رایج برای تجربه‌ای روشن‌تر و آرام‌تر.</p><a class="arrow-link" href="#contact">پرسش دیگری دارید؟ <b>←</b></a></div>
-<div class="faq-list reveal"><details><summary>برای انتخاب خدمت مناسب از کجا شروع کنم؟</summary><p>بهترین نقطه شروع، مشاوره و ارزیابی شرایط پوست است. انتخاب خدمت باید پس از بررسی نیازها و با نظر متخصص انجام شود.</p></details><details><summary>آیا نتیجه خدمات برای همه یکسان است؟</summary><p>خیر. پاسخ افراد متفاوت است و به عوامل متعددی بستگی دارد؛ هیچ نتیجه‌ای بدون ارزیابی قابل تضمین نیست.</p></details><details><summary>هزینه خدمات چگونه مشخص می‌شود؟</summary><p>هزینه به نوع خدمت و ارزیابی تخصصی بستگی دارد. جزئیات و هزینه باید پیش از انجام خدمت شفاف اعلام شود.</p></details><details><summary>چطور می‌توانم وقت مشاوره بگیرم؟</summary><p>از طریق فرم درخواست، تلفن یا راه ارتباطی رسمی کلینیک می‌توانید برای هماهنگی اقدام کنید.</p></details></div>
-</div></section>
+
 <section class="section contact" id="contact"><div class="wrap contact-grid"><div class="contact-copy reveal"><div class="kicker">شروع یک گفت‌وگو</div><h2>اولین قدم، یک مشاوره ساده است.</h2><p>اگر برای مراقبت از پوست خود پرسشی دارید، درخواستتان را ثبت کنید تا پس از تکمیل راه‌های ارتباطی واقعی کلینیک، هماهنگی انجام شود.</p><div class="contact-facts"><div>⌖ <span>نشانی</span>نشانی واقعی کلینیک درج شود</div><div>◷ <span>ساعات کاری</span>روزها و ساعات پاسخ‌گویی درج شود</div><div>✆ <span>تلفن</span>شماره رسمی کلینیک درج شود</div></div>
 <div class="studio-contact-inline"><strong>طراحی و توسعه این وب‌سایت</strong><a href="tel:+989025131506" dir="ltr">09025131506</a><a href="mailto:projects.amirstudio@gmail.com">projects.amirstudio@gmail.com</a><a href="https://www.instagram.com/projects.amirstudio/" target="_blank" rel="noopener">@projects.amirstudio</a><a class="portfolio-inline-link" href="https://amir-studio.github.io/Amir-Studio/" target="_blank" rel="noopener">مشاهده سایر نمونه‌کارهای AmirStudio ↗</a></div></div>
 <form class="form reveal" id="booking"><div class="form-grid"><div class="field"><label for="name">نام و نام خانوادگی</label><input id="name" name="name" autocomplete="name" placeholder="نام شما" required></div><div class="field"><label for="phoneInput">شماره تماس</label><input id="phoneInput" name="phone" inputmode="tel" autocomplete="tel" placeholder="۰۹۱۲۱۲۳۴۵۶۷" required pattern="[0-9۰-۹+() -]{8,16}"></div><div class="field"><label for="service">موضوع درخواست</label><select id="service" name="service" required><option value="">انتخاب کنید</option><option>ارزیابی و مراقبت پوست</option><option>خدمات زیبایی و جوان‌سازی</option><option>برنامه مراقبتی اختصاصی</option><option>سایر موارد</option></select></div><div class="field"><label for="time">زمان مناسب تماس</label><select id="time" name="time"><option>فرقی ندارد</option><option>صبح</option><option>ظهر</option><option>عصر</option></select></div><div class="field full"><label for="message">توضیحات (اختیاری)</label><textarea id="message" name="message" placeholder="اگر نکته‌ای هست برای ما بنویسید..."></textarea></div></div><button class="btn" type="submit">ثبت درخواست نمایشی <span>↗</span></button><p class="form-hint">این فرم در نسخه نمونه به سرور متصل نیست و اطلاعات را ذخیره یا ارسال نمی‌کند. برای دریافت واقعی درخواست‌ها باید سامانه رزرو و سیاست حفظ حریم خصوصی اضافه شود.</p><p class="status" id="status" role="status"></p></form>
@@ -233,7 +265,7 @@ h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
 
 <footer class="footer"><div class="wrap"><div class="footer-grid">
 <div><a class="logo" href="#home"><span class="logo-symbol">ا</span><span><span class="logo-title">اِلَن کلینیک</span><span class="logo-sub">ELAN SKIN & BEAUTY</span></span></a><p>مراقبت آگاهانه از پوست، با نگاهی علمی، انسانی و متناسب با هر فرد.</p></div>
-<div><h4>دسترسی سریع</h4><div class="footer-links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#team">تیم تخصصی</a><a href="#faq">پرسش‌های متداول</a></div></div>
+<div><h4>دسترسی سریع</h4><div class="footer-links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#team">تیم تخصصی</a><a href="faq.html">پرسش‌های متداول</a></div></div>
 <div><h4>ارتباط با ما</h4><div class="footer-links"><a href="#contact">درخواست مشاوره</a><a href="#contact">نشانی کلینیک</a><a href="#contact">ساعات کاری</a></div></div>
 <div><h4>شبکه‌های اجتماعی</h4><div class="footer-links"><a href="#contact">اینستاگرام کلینیک ــ پس از اتصال</a><a href="#contact">تماس ــ پس از تکمیل اطلاعات</a></div></div>
 </div><div class="footer-bottom"><span>© ۱۴۰۵ اِلَن کلینیک · تمامی حقوق محفوظ است</span><a href="#home">بازگشت به بالای صفحه ↑</a></div></div></footer>
