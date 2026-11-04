@@ -366,6 +366,11 @@ body{overflow-x:hidden}
  .about-grid{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.btn,.nav-booking{transition:none!important}}
+
+/* Text-led Persian about section after removing the secondary interior image */
+.about-grid{grid-template-columns:minmax(0,1fr);max-width:850px;margin-inline:auto}
+.about-image{display:none}
+.about-copy{max-width:760px}
 </style>
 </head>
 <body>
@@ -387,7 +392,7 @@ body{overflow-x:hidden}
 <div class="proof-item"><span class="proof-icon">◇</span><div><strong>پیگیری و همراهی</strong><small>از مشاوره تا مراقبت</small></div></div>
 </div></section>
 <section class="section" id="about"><div class="wrap about-grid">
-<div class="about-image reveal"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="طراحی داخلی آرام و مینیمال"></div>
+
 <div class="about-copy reveal"><div class="kicker">نگاه ما به زیبایی</div><h2>اول شما را می‌شناسیم؛<br>بعد مسیر را پیشنهاد می‌دهیم.</h2><p>مراقبت مؤثر از جایی شروع می‌شود که به‌جای نسخه‌های یکسان، به نیاز واقعی هر فرد توجه کنیم. در اِلَن، شرایط پوست، سبک زندگی و انتظارات شما در کنار نظر متخصص بررسی می‌شود.</p><p>ما به شفافیت درباره روش‌ها، مزایا و محدودیت‌ها باور داریم. هدف، انتخابی منطقی و متناسب با شماست؛ نه وعده‌های بزرگ و نتیجه‌های غیرواقعی.</p><div class="signature"><span>Élan</span><div><b>زیبایی با آگاهی</b><small>رویکرد اِلَن</small></div></div></div>
 </div></section>
 <section class="section services" id="services"><div class="wrap">
