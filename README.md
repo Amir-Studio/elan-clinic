@@ -1,28 +1,29 @@
-# ÉLAN CLINIC — Skin · Beauty · Dermatology
+# اِلَن کلینیک | نمونه‌کار AmirStudio
 
-A premium, Persian-first, RTL clinic website concept built as a responsive static site.
+یک وب‌سایت فارسی، راست‌چین و واکنش‌گرا برای معرفی کلینیک تخصصی پوست و زیبایی؛ با هویت بصری لوکس و متناسب با مخاطب ایرانی.
 
-## Preview
-Enable GitHub Pages from **Settings → Pages → Deploy from a branch → main / (root)**. The site will be published at:
+## پیش‌نمایش
+پس از فعال‌سازی GitHub Pages از مسیر **Settings → Pages → Deploy from a branch → main / (root)**، سایت از این نشانی در دسترس خواهد بود:
 
 https://amir-studio.github.io/elan-clinic/
 
-## Included
-- Editorial luxury visual identity with warm ivory, sage and muted gold
-- Responsive RTL layout and mobile navigation
-- Clinic introduction, service cards, care philosophy, team, patient journey, gallery, testimonials, FAQ and consultation form
-- Accessible labels, keyboard-friendly native controls, reduced-motion support and lightweight scroll reveals
-- No build step or framework required
+## بخش‌های پیاده‌سازی‌شده
+- صفحه اصلی و معرفی هویت کلینیک
+- معرفی خدمات، رویکرد مراقبتی و تیم تخصصی
+- مراحل مراجعه، گالری تصاویر و پرسش‌های متداول
+- بخش درخواست مشاوره و فرم نمایشی
+- معرفی AmirStudio و پیوند به وب‌سایت برند
+- طراحی واکنش‌گرا برای موبایل و دسکتاپ، منوی موبایل و حرکت‌های ظریف
+- پیاده‌سازی HTML/CSS/JavaScript بدون نیاز به فرایند Build
 
-## Before using this for a real clinic
-This repository currently contains a **demo brand and sample content**, not a verified medical provider. Replace all demo information before publication:
-1. Add the clinic's real legal/trading name, address, phone, hours and social links.
-2. Replace sample doctor profiles, titles, portraits and credentials with verified information and written permission.
-3. Replace sample testimonials only with genuine, consented patient feedback. Do not publish fabricated reviews.
-4. Confirm service descriptions and all medical claims with the responsible licensed clinician.
-5. Replace stock photography with licensed clinic photography and verify image usage rights.
-6. Connect the consultation form to a secure booking/CRM endpoint, add privacy notice and consent handling, and test delivery. The current form is a front-end demo and does not transmit or store personal data.
-7. Add the clinic's privacy policy, terms, accessibility details and any legally required disclosures.
+## پیش از استفاده برای یک کلینیک واقعی
+این مخزن یک نمونه‌کار مفهومی است و اِلَن در این پروژه به‌عنوان برند نمایشی استفاده شده است؛ اطلاعات آن نباید به‌عنوان مشخصات یک مرکز درمانی واقعی تلقی شود.
+1. نام رسمی، نشانی، شماره تماس، ساعات کاری و شبکه‌های اجتماعی واقعی را وارد کنید.
+2. تصاویر و مشخصات پزشکان را فقط با اطلاعات معتبر، مدارک تأییدشده و اجازه انتشار جایگزین کنید.
+3. دیدگاه مراجعه‌کنندگان باید واقعی و با رضایت روشن آن‌ها منتشر شود؛ از نظر و امتیاز ساختگی استفاده نکنید.
+4. توضیحات خدمات و ادعاهای پزشکی باید توسط مسئول درمانی واجد صلاحیت بررسی شوند.
+5. تصاویر نمونه را با تصاویر دارای مجوز یا عکاسی اختصاصی کلینیک جایگزین کنید.
+6. فرم فعلی صرفاً نمایشی است و اطلاعات را ذخیره یا ارسال نمی‌کند. برای دریافت واقعی درخواست‌ها، سامانه رزرو امن، رضایت‌نامه و توضیح حریم خصوصی لازم است.
 
-## Editing
-The complete static implementation is in index.html (HTML, CSS and JavaScript in one file). Update the marked sample content directly.
+## ویرایش
+تمام ساختار سایت در فایل index.html قرار دارد. متن‌ها، تصاویر و اطلاعات نمونه را می‌توان در همان فایل ویرایش کرد.
