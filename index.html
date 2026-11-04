@@ -436,6 +436,88 @@ body{overflow-x:hidden}
  #contact .form{width:100%}
 }
 
+
+/* Final spacing pass — consistent vertical rhythm and clean section boundaries */
+:root{--section-space:88px;--section-space-mobile:64px}
+html{scroll-padding-top:86px}
+.wrap{width:min(1160px,calc(100% - 48px))}
+.section{padding-block:var(--section-space)}
+.section-head{margin-bottom:36px}
+.section-head h2{margin:12px 0 13px;line-height:1.48}
+.section-head p{margin-bottom:0;max-width:650px}
+.hero{padding:72px 0 68px}
+.hero-grid{max-width:900px}
+.hero-copy>p{margin-bottom:0}
+.hero .micro{margin-top:22px}
+.proof{padding:22px 0}
+.proof-grid{gap:0}
+.proof-item{min-height:48px;padding-inline:12px}
+#about .about-copy{max-width:780px}
+#about .about-copy p{margin-bottom:15px}
+#about .signature{margin-top:23px}
+#services .services-head{align-items:flex-end;gap:28px}
+#services .section-head{margin-bottom:32px}
+#services .service-grid{gap:20px}
+#services .service{height:100%;display:flex;flex-direction:column}
+#services .service-body{display:flex;flex:1;flex-direction:column;align-items:flex-start}
+#services .service p{min-height:0;flex:1}
+#services .arrow-link{margin-top:12px}
+.manifesto-inner{min-height:0}
+#team .section-head{max-width:760px}
+.team-promise-grid{margin-top:30px}
+.team-promise{padding:22px 0}
+#team .sample-note{margin-bottom:0}
+.steps{row-gap:28px}
+.step p{margin-bottom:0}
+.gallery-section .section-head{margin-bottom:32px}
+.gallery-grid{gap:12px}
+.testimonials .quote{height:100%}
+.quote blockquote{margin-bottom:16px}
+#contact{padding:88px 0 82px!important;clear:both;overflow:visible}
+#contact .contact-grid{display:grid;align-items:start;gap:clamp(34px,7vw,84px)}
+#contact .contact-copy p{max-width:440px}
+#contact .contact-facts{gap:14px;margin-top:24px}
+#contact .form{height:auto;min-height:0;margin:0;align-self:start}
+#contact .form-hint{margin-bottom:0}
+.footer{margin:0;clear:both;padding:52px 0 22px}
+.footer-grid{padding-bottom:32px;row-gap:28px}
+.studio-signature{margin:0;clear:both;padding:0 0 40px}
+.studio-panel{row-gap:22px}
+@media(max-width:900px){
+ :root{--section-space:76px}
+ .proof-item{padding-inline:8px}
+ #services .services-head{align-items:flex-start}
+ #contact .contact-grid{gap:34px}
+}
+@media(max-width:680px){
+ :root{--section-space:var(--section-space-mobile)}
+ .wrap{width:calc(100% - 36px)}
+ .hero{padding:52px 0 48px}
+ .proof{padding:18px 0}
+ .proof-grid{column-gap:10px;row-gap:15px}
+ .proof-item{min-height:42px;padding:0;gap:9px}
+ .proof-item strong{font-size:11px}
+ .proof-item small{font-size:9px}
+ .section-head{margin-bottom:27px}
+ .section-head h2{margin:10px 0 11px}
+ #services .services-head{display:block}
+ #services .section-head{margin-bottom:24px}
+ #services .service-grid{gap:15px}
+ #services .service-body{padding:18px 18px 20px}
+ .team-promise-grid{margin-top:22px}
+ .team-promise{padding:18px 0}
+ .steps{row-gap:22px}
+ .gallery-grid{gap:8px}
+ #contact{padding:62px 0 58px!important}
+ #contact .contact-grid{grid-template-columns:minmax(0,1fr);gap:25px}
+ #contact .form{width:100%;padding:22px 17px}
+ .footer{padding:40px 0 20px}
+ .footer-grid{padding-bottom:26px;row-gap:23px}
+ .studio-signature{padding:0 0 28px}
+ .studio-panel{gap:16px;padding:22px 18px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
 </style>
 </head>
 <body>
