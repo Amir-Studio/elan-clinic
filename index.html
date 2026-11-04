@@ -371,6 +371,46 @@ body{overflow-x:hidden}
 .about-grid{grid-template-columns:minmax(0,1fr);max-width:850px;margin-inline:auto}
 .about-image{display:none}
 .about-copy{max-width:760px}
+
+/* Final visual polish — Persian landing page */
+.hero-copy{align-items:center;text-align:center}
+.hero-copy .kicker{direction:rtl}
+.hero h1{direction:rtl;text-align:center;white-space:nowrap;font-size:clamp(25px,4.15vw,50px);line-height:1.45;letter-spacing:-.8px;max-width:100%}
+.hero h1 em{direction:ltr;unicode-bidi:isolate}
+.hero-copy>p{text-align:center}
+.hero .actions{display:none!important}
+.language-menu summary{min-width:66px;height:32px;padding:0 9px;gap:7px;font-size:10px;border-radius:2px}
+.language-menu summary:after{width:5px;height:5px}
+.language-options{min-width:118px}
+.language-options a,.language-options .current-language{padding:7px 9px;font-size:10px}
+.manifesto{background:transparent!important;color:var(--ink)!important}
+.manifesto-inner{background:#f7f7f4;border:1px solid #ecece6;padding:clamp(28px,4vw,54px) clamp(22px,5vw,62px);gap:8%;border-radius:2px}
+.manifesto .kicker{color:var(--olive)!important}
+.manifesto h2{color:var(--ink);font-size:clamp(27px,3.2vw,39px)}
+.manifesto p{color:var(--muted)!important}
+.value{border-top:1px solid #dedfd7}
+.value b{color:#9c8967}
+.value strong{color:var(--ink)}
+.value small{color:var(--muted)!important}
+.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:790px;gap:24px;margin-inline:auto}
+.person-photo{height:clamp(260px,34vw,360px);overflow:hidden;position:relative}
+.person-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:saturate(.82)}
+.person-index{position:absolute;inset:auto 14px 14px auto}
+.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,clamp(180px,24vw,270px));gap:12px}
+.gallery-grid img,.gallery-grid img:first-child,.gallery-grid img:last-child{grid-column:auto;grid-row:auto;width:100%;height:100%;min-width:0;object-fit:cover;display:block}
+@media(max-width:680px){
+ .hero h1{font-size:clamp(24px,7.2vw,32px);letter-spacing:-.65px}
+ .hero-copy>p{text-align:center}
+ .language-menu summary{min-width:62px;height:30px;padding:0 8px;font-size:10px}
+ .manifesto-inner{grid-template-columns:1fr;gap:25px;padding:30px 22px}
+ .team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 12px}
+ .person-photo{height:clamp(190px,56vw,250px)}
+ .person h3{font-size:13px}
+ .person p{font-size:10px}
+ .gallery-grid{grid-template-rows:repeat(2,clamp(135px,43vw,190px));gap:8px}
+}
+@media(max-width:350px){.hero h1{font-size:23px}}
+
 </style>
 </head>
 <body>
@@ -382,7 +422,7 @@ body{overflow-x:hidden}
 </div></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid">
-<div class="hero-copy reveal"><div class="kicker">کلینیک تخصصی پوست و زیبایی</div><h1>کلینیک تخصصی پوست و زیبایی <em>Élan</em></h1><p>در اِلَن، قرار نیست شبیه کسی دیگر شوید. اینجا با شناخت نیازهای پوست شما، به انتخابی آگاهانه و مراقبتی متناسب با خودتان می‌رسیم؛ با آرامش، دقت و احترام.</p><div class="actions"><a class="btn btn-outline" href="#services">مشاهده خدمات <span>↗</span></a></div><div class="micro">زیبایی طبیعی، تصمیم آگاهانه، مراقبت مسئولانه</div></div>
+<div class="hero-copy reveal"><div class="kicker">کلینیک تخصصی پوست و زیبایی</div><h1 dir="rtl" lang="fa">کلینیک پوست و زیبایی <em>Élan</em></h1><p>در اِلَن، قرار نیست شبیه کسی دیگر شوید. اینجا با شناخت نیازهای پوست شما، به انتخابی آگاهانه و مراقبتی متناسب با خودتان می‌رسیم؛ با آرامش، دقت و احترام.</p><div class="micro">زیبایی طبیعی، تصمیم آگاهانه، مراقبت مسئولانه</div></div>
 </div>
 </div></section>
 <section class="proof"><div class="wrap proof-grid">
@@ -408,10 +448,8 @@ body{overflow-x:hidden}
 </div></div></section>
 <section class="section" id="team"><div class="wrap"><div class="section-head reveal"><div class="kicker">تیم اِلَن</div><h2>اعتماد، با تخصص ساخته می‌شود.</h2><p>معرفی اعضای تیم باید با نام، تصویر، مدرک و سوابق واقعی و تأییدشده تکمیل شود.</p></div>
 <div class="team-grid">
-<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه یک پزشک مرد در پوشش پزشکی" loading="lazy"><span class="person-index">01</span></div><h3>پزشک متخصص پوست</h3><p>معرفی نمونه؛ نام، مدرک و سوابق پزشک واقعی باید جایگزین شود.</p></article>
-<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه پزشک در محیط درمانی" loading="lazy"><span class="person-index">02</span></div><h3>پزشک مشاور</h3><p>معرفی نمونه؛ عنوان تخصص و اطلاعات حرفه‌ای پس از تأیید درج می‌شود.</p></article>
-<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه یک پزشک زن" loading="lazy"><span class="person-index">03</span></div><h3>کارشناس مراقبت پوست</h3><p>معرفی نمونه؛ تصویر و صلاحیت حرفه‌ای باید با اطلاعات واقعی تطبیق داده شود.</p></article>
-<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=85" alt="تصویر نمونه پزشک در فضای درمانی" loading="lazy"><span class="person-index">04</span></div><h3>پزشک همکار</h3><p>معرفی نمونه؛ نام، تصویر، تخصص و سوابق پس از تأیید کلینیک درج می‌شود.</p></article>
+<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه پزشک" loading="lazy"><span class="person-index">01</span></div><h3>پزشک متخصص پوست</h3><p>معرفی نمونه؛ نام، مدرک و سوابق پزشک واقعی باید جایگزین شود.</p></article>
+<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه پزشک مشاور" loading="lazy"><span class="person-index">02</span></div><h3>پزشک مشاور</h3><p>معرفی نمونه؛ عنوان تخصص و اطلاعات حرفه‌ای پس از تأیید درج می‌شود.</p></article>
 </div><p class="sample-note">تصاویر این بخش عکس‌های نمونه هستند و اعضای واقعی کلینیک نیستند. نام، تصویر، تخصص و سوابق باید با اطلاعات واقعی و مجاز جایگزین شوند.</p>
 </div></section>
 <section class="section steps-section" id="journey"><div class="wrap"><div class="section-head reveal"><div class="kicker">مراحل مراجعه</div><h2>از اولین تماس تا مراقبت پیوسته</h2><p>یک مسیر روشن و قابل‌درک، تا در هر مرحله بدانید چه اتفاقی می‌افتد.</p></div>
