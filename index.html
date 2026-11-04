@@ -205,6 +205,49 @@ h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
 .studio-signature{margin-top:0}
 @media(max-width:900px){.person-photo{height:285px}.gallery-section .section-head{display:block}.gallery-grid{grid-template-rows:200px 200px}}
 @media(max-width:680px){.about-grid{padding:18px}.person-photo{height:230px}.gallery-section .section-head{display:block}.gallery-grid{grid-template-rows:180px 130px 130px}.gallery-section{padding-top:70px;padding-bottom:75px}}
+
+/* Editorial rhythm: stronger visual changes between long-scroll sections */
+.proof{background:#f1eee7}
+.manifesto{background:#252b24;color:#f5f1e9}
+.manifesto .kicker,.manifesto .value b{color:#d1b78a}
+.manifesto p,.manifesto small{color:#d0d0c6}
+.services{background:#f5f3ed}
+#team{background:#f7f6f2}
+.team-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.person{min-width:0}
+.person-photo{height:300px}
+.person-photo img{object-position:center 24%}
+.person{background:#fff;border:1px solid #e8e3d8;padding-bottom:18px}
+.person h3,.person p{margin-right:15px;margin-left:15px}
+.person h3{margin-top:14px}
+.gallery-section{background:#eeece5}
+.steps-section{background:#f8f8f6}
+.testimonials{background:#272c25}
+.contact{background:linear-gradient(135deg,#e9e5dc 0%,#f7f6f1 100%)}
+.studio-signature{background:#080908;padding:36px 0 42px;margin:0}
+.studio-panel{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:25px;align-items:center;background:radial-gradient(ellipse at 10% 0%,#25231d 0%,#111210 48%,#090a09 100%);border:1px solid rgba(198,166,107,.28);padding:36px 38px;color:#eee9df;position:relative;overflow:hidden}
+.studio-panel:before{content:"";position:absolute;inset:auto auto -170px -100px;width:340px;height:340px;border:1px solid rgba(198,166,107,.15);border-radius:50%;box-shadow:0 0 0 28px rgba(198,166,107,.035),0 0 0 58px rgba(198,166,107,.025);pointer-events:none}
+.studio-brand-row,.studio-copy,.studio-contact,.studio-bottomline{position:relative;z-index:1}
+.studio-brand-row{display:grid;gap:17px;align-content:center}
+.studio-brand{display:flex;align-items:center;gap:13px;direction:ltr;width:max-content}
+.studio-logo-img{width:56px;height:56px;object-fit:contain;border-radius:50%;border:1px solid rgba(198,166,107,.45);padding:3px;background:#090909}
+.studio-wordmark{font:600 22px "Manrope",Arial,sans-serif;letter-spacing:-.7px;color:#f3eee4;white-space:nowrap}
+.studio-wordmark span{color:#c6a66b}
+.studio-credit{display:grid;gap:6px;color:#c9c2b4;font-size:11px;line-height:1.9}
+.studio-credit strong{color:#f3eee4;direction:ltr;display:inline-block}
+.studio-credit a{font:11px "Manrope",Arial,sans-serif;color:#c6a66b;width:max-content;border-bottom:1px solid #c6a66b55;padding-bottom:3px}
+.studio-copy{border-left:1px solid rgba(198,166,107,.22);padding:4px 25px 4px 0}
+.studio-caption{font:9px "Manrope",Arial,sans-serif;letter-spacing:2px;color:#b99b65;margin-bottom:12px}
+.studio-copy h2{font-size:clamp(19px,2vw,25px);line-height:1.8;font-weight:400;color:#f0eadf;margin:0 0 9px}
+.studio-copy p{font-size:11px;line-height:2.2;color:#aaa397;margin:0;max-width:440px}
+.studio-contact{display:grid;gap:14px;justify-items:start}
+.studio-contact a{display:grid;gap:4px;font:11px "Manrope",Arial,sans-serif;color:#e8e1d4;direction:ltr;text-align:left;overflow-wrap:anywhere}
+.studio-contact a span{font:8px "Manrope",Arial,sans-serif;letter-spacing:1.6px;color:#b99b65}
+.studio-contact a:hover,.studio-bottomline a:hover{color:#d7bd8e}
+.studio-bottomline{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.13);padding-top:17px;display:flex;justify-content:space-between;gap:18px;color:#8f8c82;font:8px "Manrope",Arial,sans-serif;letter-spacing:1.4px}
+.studio-bottomline a{font-family:"Vazirmatn",sans-serif;font-size:10px;letter-spacing:0;color:#c6a66b}
+@media(max-width:900px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.studio-panel{grid-template-columns:1fr 1fr}.studio-copy{border:0;padding:0}.studio-contact{grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.studio-bottomline{grid-column:1/-1}}
+@media(max-width:680px){.team-grid{grid-template-columns:1fr 1fr;gap:13px}.person-photo{height:220px}.person h3{font-size:13px}.person p{font-size:10px}.studio-signature{padding:22px 0 26px}.studio-panel{grid-template-columns:1fr;padding:25px 20px;gap:20px}.studio-brand-row{gap:12px}.studio-logo-img{width:48px;height:48px}.studio-wordmark{font-size:20px}.studio-copy{border-top:1px solid rgba(198,166,107,.2);padding:17px 0 0}.studio-copy h2{font-size:21px}.studio-contact{grid-template-columns:1fr;gap:12px}.studio-bottomline{flex-direction:column;gap:10px;line-height:1.8}}
 </style>
 </head>
 <body>
@@ -212,7 +255,7 @@ h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
 <header class="header"><div class="wrap nav">
 <a class="logo" href="#home" aria-label="اِلَن کلینیک"><span class="logo-symbol">ا</span><span><span class="logo-title">اِلَن کلینیک</span><span class="logo-sub">ELAN SKIN & BEAUTY</span></span></a>
 <nav class="links" id="links"><a href="#about">درباره ما</a><a href="#services">خدمات</a><a href="#team">تیم تخصصی</a><a href="#journey">مراحل مراجعه</a><a href="faq.html">پرسش‌های متداول</a></nav>
-<div class="nav-cta"><a class="phone" href="#contact">۰۲۱ ــ ۰۰۰۰ ۰۰۰۰</a><a class="btn" href="#contact">رزرو مشاوره <span>↗</span></a><button class="hamb" id="hamb" aria-label="باز کردن منو" aria-expanded="false">☰</button></div>
+<div class="nav-cta"><a class="phone" href="#contact">۰۲۱ ــ ۰۰۰۰ ۰۰۰۰</a><a class="btn" href="#booking">رزرو مشاوره <span>↗</span></a><button class="hamb" id="hamb" aria-label="باز کردن منو" aria-expanded="false">☰</button></div>
 </div></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid">
@@ -245,6 +288,7 @@ h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
 <article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه یک پزشک مرد در پوشش پزشکی" loading="lazy"><span class="person-index">01</span></div><h3>پزشک متخصص پوست</h3><p>معرفی نمونه؛ نام، مدرک و سوابق پزشک واقعی باید جایگزین شود.</p></article>
 <article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه پزشک در محیط درمانی" loading="lazy"><span class="person-index">02</span></div><h3>پزشک مشاور</h3><p>معرفی نمونه؛ عنوان تخصص و اطلاعات حرفه‌ای پس از تأیید درج می‌شود.</p></article>
 <article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85" alt="پرتره نمونه یک پزشک زن" loading="lazy"><span class="person-index">03</span></div><h3>کارشناس مراقبت پوست</h3><p>معرفی نمونه؛ تصویر و صلاحیت حرفه‌ای باید با اطلاعات واقعی تطبیق داده شود.</p></article>
+<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=85" alt="تصویر نمونه پزشک در فضای درمانی" loading="lazy"><span class="person-index">04</span></div><h3>پزشک همکار</h3><p>معرفی نمونه؛ نام، تصویر، تخصص و سوابق پس از تأیید کلینیک درج می‌شود.</p></article>
 </div><p class="sample-note">تصاویر این بخش عکس‌های نمونه هستند و اعضای واقعی کلینیک نیستند. نام، تصویر، تخصص و سوابق باید با اطلاعات واقعی و مجاز جایگزین شوند.</p>
 </div></section>
 <section class="section steps-section" id="journey"><div class="wrap"><div class="section-head reveal"><div class="kicker">مراحل مراجعه</div><h2>از اولین تماس تا مراقبت پیوسته</h2><p>یک مسیر روشن و قابل‌درک، تا در هر مرحله بدانید چه اتفاقی می‌افتد.</p></div>
@@ -258,7 +302,7 @@ h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
 </div></section>
 
 <section class="section contact" id="contact"><div class="wrap contact-grid"><div class="contact-copy reveal"><div class="kicker">شروع یک گفت‌وگو</div><h2>اولین قدم، یک مشاوره ساده است.</h2><p>اگر برای مراقبت از پوست خود پرسشی دارید، درخواستتان را ثبت کنید تا پس از تکمیل راه‌های ارتباطی واقعی کلینیک، هماهنگی انجام شود.</p><div class="contact-facts"><div>⌖ <span>نشانی</span>نشانی واقعی کلینیک درج شود</div><div>◷ <span>ساعات کاری</span>روزها و ساعات پاسخ‌گویی درج شود</div><div>✆ <span>تلفن</span>شماره رسمی کلینیک درج شود</div></div>
-<div class="studio-contact-inline"><strong>طراحی و توسعه این وب‌سایت</strong><a href="tel:+989025131506" dir="ltr">09025131506</a><a href="mailto:projects.amirstudio@gmail.com">projects.amirstudio@gmail.com</a><a href="https://www.instagram.com/projects.amirstudio/" target="_blank" rel="noopener">@projects.amirstudio</a><a class="portfolio-inline-link" href="https://amir-studio.github.io/Amir-Studio/" target="_blank" rel="noopener">مشاهده سایر نمونه‌کارهای AmirStudio ↗</a></div></div>
+</div>
 <form class="form reveal" id="booking"><div class="form-grid"><div class="field"><label for="name">نام و نام خانوادگی</label><input id="name" name="name" autocomplete="name" placeholder="نام شما" required></div><div class="field"><label for="phoneInput">شماره تماس</label><input id="phoneInput" name="phone" inputmode="tel" autocomplete="tel" placeholder="۰۹۱۲۱۲۳۴۵۶۷" required pattern="[0-9۰-۹+() -]{8,16}"></div><div class="field"><label for="service">موضوع درخواست</label><select id="service" name="service" required><option value="">انتخاب کنید</option><option>ارزیابی و مراقبت پوست</option><option>خدمات زیبایی و جوان‌سازی</option><option>برنامه مراقبتی اختصاصی</option><option>سایر موارد</option></select></div><div class="field"><label for="time">زمان مناسب تماس</label><select id="time" name="time"><option>فرقی ندارد</option><option>صبح</option><option>ظهر</option><option>عصر</option></select></div><div class="field full"><label for="message">توضیحات (اختیاری)</label><textarea id="message" name="message" placeholder="اگر نکته‌ای هست برای ما بنویسید..."></textarea></div></div><button class="btn" type="submit">ثبت درخواست نمایشی <span>↗</span></button><p class="form-hint">این فرم در نسخه نمونه به سرور متصل نیست و اطلاعات را ذخیره یا ارسال نمی‌کند. برای دریافت واقعی درخواست‌ها باید سامانه رزرو و سیاست حفظ حریم خصوصی اضافه شود.</p><p class="status" id="status" role="status"></p></form>
 </div></section>
 </main>
@@ -273,15 +317,26 @@ h1,h2,h3,.logo-title,.field label{font-family:var(--fa)}
 <section class="studio-signature" aria-label="طراحی و توسعه توسط AmirStudio">
   <div class="wrap">
     <div class="studio-panel">
-      <a class="studio-brand" href="https://amir-studio.github.io/Amir-Studio/" target="_blank" rel="noopener noreferrer" aria-label="مشاهده وب‌سایت AmirStudio">
-        <img class="studio-logo-img" src="https://amir-studio.github.io/Amir-Studio/assets/amir-studio-logo.png" alt="نشان AmirStudio">
-        <span class="studio-wordmark">Amir<span>Studio</span></span>
-      </a>
+      <div class="studio-brand-row">
+        <a class="studio-brand" href="https://amir-studio.github.io/Amir-Studio/" target="_blank" rel="noopener noreferrer" aria-label="وب‌سایت AmirStudio">
+          <img class="studio-logo-img" src="https://amir-studio.github.io/Amir-Studio/assets/amir-studio-logo.png" alt="لوگوی AmirStudio">
+          <span class="studio-wordmark">Amir<span>Studio</span></span>
+        </a>
+        <div class="studio-credit">طراحی و توسعه توسط <strong>AmirStudio</strong>
+          <a href="https://www.instagram.com/projects.amirstudio/" target="_blank" rel="noopener noreferrer" dir="ltr">@projects.amirstudio</a>
+        </div>
+      </div>
       <div class="studio-copy">
         <div class="studio-caption">DIGITAL DESIGN &amp; DEVELOPMENT</div>
         <h2>برای حضوری که در ذهن می‌ماند، طراحی کنیم.</h2>
-        <p>هر کسب‌وکار شایسته‌ی هویتی دیجیتال است که شخصیت، کیفیت و هدفش را درست نشان دهد. اگر برای رشد برندتان به یک وب‌سایت اختصاصی فکر می‌کنید، گفت‌وگو را از همین‌جا شروع کنیم.</p>
+        <p>هویت دیجیتال شایسته‌ی کسب‌وکار شماست؛ دقیق، متمایز و ماندگار. برای طراحی وب‌سایتی اختصاصی که شخصیت برندتان را درست روایت کند، با ما در ارتباط باشید.</p>
       </div>
+      <div class="studio-contact">
+        <a href="tel:+989025131506" dir="ltr"><span>PHONE</span>09025131506</a>
+        <a href="mailto:projects.amirstudio@gmail.com" dir="ltr"><span>EMAIL</span>projects.amirstudio@gmail.com</a>
+        <a href="https://www.instagram.com/projects.amirstudio/" target="_blank" rel="noopener noreferrer" dir="ltr"><span>INSTAGRAM</span>@projects.amirstudio ↗</a>
+      </div>
+      <div class="studio-bottomline"><span>AMIRSTUDIO · INDEPENDENT DIGITAL STUDIO</span><a href="https://amir-studio.github.io/Amir-Studio/" target="_blank" rel="noopener noreferrer">مشاهده سایر نمونه‌کارها ↗</a></div>
     </div>
   </div>
 </section>
