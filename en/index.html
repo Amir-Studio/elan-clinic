@@ -24,6 +24,7 @@
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/Amir-Studio/fonts@e65d824a5e597bd58bc3f850c7303a167d28b14b/Vazirmatn-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
+
 :root{--paper:#f4f0e8;--paper2:#ebe6dc;--white:#fffdf8;--ink:#292c26;--muted:#77796f;--olive:#59664f;--olive2:#78836c;--gold:#b69b70;--line:#dcd6ca;--serif:'Playfair Display',Georgia,serif;--fa:'Vazirmatn',sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--fa);line-height:1.9}body.lock{overflow:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,calc(100% - 52px));margin:auto}.announcement{background:var(--ink);color:#e9e2d5;text-align:center;padding:7px 15px;font-size:10px;letter-spacing:.2px}.announcement b{color:#d9c19a;font-weight:500}.header{height:82px;position:sticky;top:0;z-index:30;background:#f4f0e8ed;backdrop-filter:blur(14px);border-bottom:1px solid #292c2610}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:11px}.logo-symbol{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font:25px var(--serif);color:var(--olive)}.logo-title{font-size:17px;font-weight:600;letter-spacing:1px}.logo-sub{display:block;font:9px var(--serif);direction:ltr;letter-spacing:2.3px;color:var(--muted);margin-top:-4px}.links{display:flex;align-items:center;gap:27px;font-size:12px;color:#5e6058}.links a:hover{color:var(--olive)}.nav-cta{display:flex;align-items:center;gap:15px}.phone{direction:ltr;font:12px Arial;color:#62665c}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:13px 22px;background:var(--olive);border:1px solid var(--olive);color:white;font-size:12px;transition:.25s}.btn:hover{background:#414c3c;transform:translateY(-2px)}.btn-outline{background:transparent;color:var(--ink);border-color:#aaa99d}.btn-outline:hover{color:white}.hamb{display:none;border:0;background:none;font-size:24px;color:var(--ink)}
 .hero{padding:46px 0 88px}.hero-grid{display:grid;grid-template-columns:1fr 1.03fr;gap:7%;align-items:center;min-height:570px}.kicker{font-size:10px;color:var(--olive);font-weight:600;letter-spacing:1.7px;display:flex;align-items:center;gap:12px}.kicker:before{content:"";width:30px;height:1px;background:var(--gold)}h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(42px,5.2vw,69px);font-weight:300;line-height:1.45;letter-spacing:-2px;margin:22px 0 17px}.hero h1 em{font:italic 1.02em var(--serif);color:var(--olive);direction:ltr;display:inline-block}.hero-copy>p{font-size:14px;color:var(--muted);max-width:455px;line-height:2.25}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:27px}.micro{margin-top:35px;color:var(--muted);font-size:10px;display:flex;align-items:center;gap:12px}.micro:before{content:"";width:27px;height:1px;background:var(--gold)}.hero-photo{height:555px;position:relative}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:48% 48% 3px 3px}.photo-note{position:absolute;bottom:27px;left:-25px;background:var(--white);padding:15px 20px;box-shadow:0 12px 32px #24251d12;font-size:10px;color:var(--muted)}.photo-note strong{display:block;color:var(--ink);font-size:12px;font-weight:500}.seal{position:absolute;right:-31px;bottom:38px;width:105px;height:105px;border-radius:50%;background:var(--white);border:1px solid var(--line);display:grid;place-items:center;text-align:center;color:var(--olive);font-size:9px;line-height:1.7}.seal b{display:block;font:29px var(--serif)}
@@ -315,6 +316,312 @@ html[dir="ltr"] .faq-list summary{direction:ltr}html[dir="ltr"] .footer-bottom{d
 .gallery-grid img:last-child{grid-column:2/4;grid-row:2;}
 @media(max-width:900px){.gallery-grid{grid-template-rows:190px 190px;gap:10px}}
 @media(max-width:680px){.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 140px 140px;gap:8px}.gallery-grid img:first-child{grid-column:1;grid-row:1/3}.gallery-grid img:last-child{grid-column:1/3;grid-row:3}}
+
+/* Shared final layout refinements from the Persian edition */
+/* Image layout guard: prevent oversized sources from stretching any section */
+img{max-width:100%;height:auto}
+.hero-photo,.about-image,.service,.person,.person-photo,.gallery-grid{min-width:0;overflow:hidden}
+.hero-photo{width:100%;max-width:100%}
+.hero-photo img,.about-image img,.service img,.person-photo img,.gallery-grid img{display:block;width:100%;max-width:100%;object-fit:cover}
+.hero-photo img{height:100%}
+.about-image img{height:440px}
+.service img{height:220px}
+.team-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:start}
+.person-photo{height:clamp(230px,27vw,330px);aspect-ratio:4/5}
+.person-photo img{height:100%;object-position:center 24%}
+.gallery-grid{min-width:0}
+.gallery-grid img{min-width:0;min-height:0}
+.language-switch{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:34px;padding:0 9px;border:1px solid #c9b894;color:#59664f;font:600 10px Arial,sans-serif;letter-spacing:1px;direction:ltr;transition:.2s}
+.language-switch:hover{background:#59664f;color:#fff;border-color:#59664f}
+@media(max-width:900px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.person-photo{height:clamp(220px,38vw,300px)}}
+@media(max-width:680px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.person-photo{height:220px;aspect-ratio:4/5}.hero-photo{width:88%}.about-image img{height:350px}.service img{height:235px}}
+/* Responsive image containment */
+img{max-width:100%;height:auto}
+.hero-photo,.about-image,.service,.person,.person-photo,.gallery-grid{min-width:0;overflow:hidden}
+.hero-photo{width:100%;max-width:100%}.hero-photo img{display:block;width:100%;height:100%;max-width:100%;object-fit:cover}
+.about-image img,.service img,.person-photo img,.gallery-grid img{display:block;width:100%;max-width:100%;object-fit:cover}
+.about-image img{height:440px}.service img{height:220px}
+.team-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:start}
+.person-photo{height:clamp(230px,27vw,330px);aspect-ratio:4/5}
+.person-photo img{height:100%;object-position:center 24%}
+.gallery-grid{min-width:0}.gallery-grid img{min-width:0;min-height:0}
+.language-switch{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:34px;padding:0 9px;border:1px solid #c9b894;color:#59664f;font:600 10px Arial,sans-serif;letter-spacing:1px;direction:ltr}
+.language-switch:hover{background:#59664f;color:#fff;border-color:#59664f}
+@media(max-width:900px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.person-photo{height:clamp(220px,38vw,300px)}}
+@media(max-width:680px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.person-photo{height:220px;aspect-ratio:4/5}.hero-photo{width:88%}.about-image img{height:350px}.service img{height:235px}}
+/* Refined identity, language control and cinematic navigation */
+.logo.wordmark-logo{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:0;min-width:132px}
+.logo.wordmark-logo .logo-title{font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:500;line-height:1.05;letter-spacing:-.7px;color:#30362d;direction:ltr}
+.logo.wordmark-logo .logo-sub{font-family:'Vazirmatn',sans-serif;font-size:9px;font-weight:400;letter-spacing:0;line-height:1.7;color:#85877e;margin-top:5px;direction:rtl;white-space:nowrap}
+.language-menu{position:relative;z-index:42;direction:rtl}
+.language-menu details{position:relative}
+.language-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;min-width:82px;height:40px;padding:0 13px;border:1px solid #d8d2c5;background:#fff;color:#454b41;font-size:12px;font-weight:500;transition:background .25s,border-color .25s,color .25s}
+.language-menu summary::-webkit-details-marker{display:none}
+.language-menu summary:after{content:"";width:6px;height:6px;border-right:1px solid #8c806b;border-bottom:1px solid #8c806b;transform:rotate(45deg) translateY(-2px);transition:transform .3s}
+.language-menu details[open] summary{border-color:#b49a72;background:#fbfaf7}
+.language-menu details[open] summary:after{transform:rotate(225deg) translate(-2px,-1px)}
+.language-options{position:absolute;top:calc(100% + 9px);right:0;min-width:142px;padding:7px;background:#fff;border:1px solid #e9e5dc;box-shadow:0 18px 38px #25292318;display:grid;gap:2px;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transform-origin:top right;transition:opacity .28s ease,transform .38s cubic-bezier(.2,.75,.25,1),visibility 0s linear .38s}
+.language-menu details[open] .language-options{opacity:1;visibility:visible;transform:translateY(0) scale(1);transition-delay:0s}
+.language-options a,.language-options .current-language{display:block;padding:9px 11px;font-size:11px;color:#62665c;white-space:nowrap}
+.language-options a:hover{background:#f5f3ed;color:#343c31}
+.language-options .current-language{color:#59664f;background:#f7f7f3;font-weight:600}
+.hamb{transition:transform .45s cubic-bezier(.2,.8,.2,1),color .25s}
+.hamb[aria-expanded="true"]{transform:rotate(90deg);color:#9c8053}
+@media(max-width:680px){
+ .header{z-index:50}
+ .nav{position:relative}
+ .nav-cta{gap:9px}
+ .language-menu summary{min-width:74px;height:38px;padding:0 10px;font-size:11px}
+ .logo.wordmark-logo{min-width:0}
+ .logo.wordmark-logo .logo-title{font-size:27px}
+ .links{display:flex;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-15px) scale(.985);transform-origin:top center;transition:opacity .34s ease,transform .48s cubic-bezier(.2,.8,.2,1),visibility 0s linear .48s;max-height:calc(100dvh - 82px);overflow-y:auto}
+ .links.open{display:flex;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0) scale(1);transition-delay:0s}
+ .links a{opacity:0;transform:translateY(-7px);transition:opacity .28s ease,transform .38s cubic-bezier(.2,.8,.2,1)}
+ .links.open a{opacity:1;transform:translateY(0)}
+ .links.open a:nth-child(1){transition-delay:.04s}.links.open a:nth-child(2){transition-delay:.08s}.links.open a:nth-child(3){transition-delay:.12s}.links.open a:nth-child(4){transition-delay:.16s}.links.open a:nth-child(5){transition-delay:.20s}
+}
+@media(prefers-reduced-motion:reduce){.links,.links a,.hamb,.language-options,.language-menu summary:after{transition:none!important;transform:none!important}}
+
+/* Persian layout refinement */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{overflow-x:hidden}
+.wrap{width:min(1160px,calc(100% - 48px));margin-inline:auto}
+.hero{padding:clamp(58px,8vw,104px) 0 clamp(55px,7vw,88px)}
+.hero-grid{display:block;min-height:0;max-width:900px;margin-inline:auto}
+.hero-copy{text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero-copy .kicker{justify-content:center}
+.hero h1{font-size:clamp(32px,4.2vw,54px);line-height:1.35;letter-spacing:-1.2px;margin:18px 0 20px;white-space:normal;text-wrap:balance}
+.hero h1 em{font-style:normal;font-family:'Playfair Display',Georgia,serif;font-weight:500;white-space:nowrap}
+.hero-copy>p{max-width:680px;margin-inline:auto;line-height:2.15}
+.hero .actions{justify-content:center;margin-top:22px}
+.hero .micro{justify-content:center;margin-top:26px}
+.about-grid{grid-template-columns:minmax(0,1fr);gap:0;max-width:850px;margin-inline:auto}
+.about-copy{max-width:760px}
+.about-copy h2,.about-copy p{text-wrap:pretty}
+.nav-booking{display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;padding:10px 15px;background:var(--olive);color:#fff;border:1px solid var(--olive);font-size:11px;transition:background .35s ease,transform .45s cubic-bezier(.2,.8,.2,1)}
+.nav-booking:hover{background:#414c3c;transform:translateY(-2px)}
+.links{gap:clamp(12px,1.6vw,22px)}
+.links a{transition:color .3s ease}
+.reveal{transition:opacity .85s ease,transform .95s cubic-bezier(.2,.75,.25,1)}
+.btn,.nav-booking,.language-menu summary{transition:all .35s cubic-bezier(.2,.75,.25,1)}
+@media(max-width:900px){.nav-booking{padding:9px 11px;font-size:10px}.links{gap:12px}.hero h1{font-size:clamp(32px,5vw,46px)}}
+@media(max-width:680px){
+ .wrap{width:calc(100% - 36px)}
+ .hero{padding:54px 0 58px}
+ .hero-grid{min-height:0}
+ .hero h1{font-size:clamp(30px,8vw,39px);line-height:1.45;letter-spacing:-.7px}
+ .hero-copy>p{font-size:12px}
+ .nav-booking{justify-content:center;margin-top:12px;padding:13px 12px;border:0;border-top:1px solid var(--line);background:transparent;color:var(--olive);font-size:12px}
+ .links.open{gap:0}
+ .links.open a,.links.open .nav-booking{opacity:1;transform:translateY(0)}
+ .about-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.btn,.nav-booking{transition:none!important}}
+
+/* Text-led Persian about section after removing the secondary interior image */
+.about-grid{grid-template-columns:minmax(0,1fr);max-width:850px;margin-inline:auto}
+.about-image{display:none}
+.about-copy{max-width:760px}
+
+/* Final visual polish — Persian landing page */
+.hero-copy{align-items:center;text-align:center}
+.hero-copy .kicker{direction:rtl}
+.hero h1{direction:rtl;text-align:center;white-space:nowrap;font-size:clamp(25px,4.15vw,50px);line-height:1.45;letter-spacing:-.8px;max-width:100%}
+.hero h1 em{direction:ltr;unicode-bidi:isolate}
+.hero-copy>p{text-align:center}
+.hero .actions{display:none!important}
+.language-menu summary{min-width:66px;height:32px;padding:0 9px;gap:7px;font-size:10px;border-radius:2px}
+.language-menu summary:after{width:5px;height:5px}
+.language-options{min-width:118px}
+.language-options a,.language-options .current-language{padding:7px 9px;font-size:10px}
+.manifesto{background:transparent!important;color:var(--ink)!important}
+.manifesto-inner{background:#f7f7f4;border:1px solid #ecece6;padding:clamp(28px,4vw,54px) clamp(22px,5vw,62px);gap:8%;border-radius:2px}
+.manifesto .kicker{color:var(--olive)!important}
+.manifesto h2{color:var(--ink);font-size:clamp(27px,3.2vw,39px)}
+.manifesto p{color:var(--muted)!important}
+.value{border-top:1px solid #dedfd7}
+.value b{color:#9c8967}
+.value strong{color:var(--ink)}
+.value small{color:var(--muted)!important}
+.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:790px;gap:24px;margin-inline:auto}
+.person-photo{height:clamp(260px,34vw,360px);overflow:hidden;position:relative}
+.person-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:saturate(.82)}
+.person-index{position:absolute;inset:auto 14px 14px auto}
+.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,clamp(180px,24vw,270px));gap:12px}
+.gallery-grid img,.gallery-grid img:first-child,.gallery-grid img:last-child{grid-column:auto;grid-row:auto;width:100%;height:100%;min-width:0;object-fit:cover;display:block}
+@media(max-width:680px){
+ .hero h1{font-size:clamp(24px,7.2vw,32px);letter-spacing:-.65px}
+ .hero-copy>p{text-align:center}
+ .language-menu summary{min-width:62px;height:30px;padding:0 8px;font-size:10px}
+ .manifesto-inner{grid-template-columns:1fr;gap:25px;padding:30px 22px}
+ .team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 12px}
+ .person-photo{height:clamp(190px,56vw,250px)}
+ .person h3{font-size:13px}
+ .person p{font-size:10px}
+ .gallery-grid{grid-template-rows:repeat(2,clamp(135px,43vw,190px));gap:8px}
+}
+@media(max-width:350px){.hero h1{font-size:23px}}
+
+
+/* Doctor section — editorial, image-free trust presentation */
+.team-grid{display:none}
+.team-promise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;margin-top:38px}
+.team-promise{display:grid;grid-template-columns:44px 1fr;gap:15px;padding:24px 0;border-top:1px solid #e5e6df;align-items:start}
+.team-promise-no{font:24px var(--serif);color:var(--gold);direction:ltr}
+.team-promise h3{font-size:15px;font-weight:600;margin:1px 0 9px;color:var(--ink)}
+.team-promise p{font-size:12px;line-height:2.2;color:var(--muted);margin:0;max-width:460px}
+#team .sample-note{margin-top:24px;padding:13px 16px;background:#f7f7f4;border-right:2px solid #b49a72;line-height:2}
+#contact{position:relative;isolation:isolate;padding-bottom:112px;overflow:visible;clear:both}
+#contact .contact-grid{align-items:stretch;min-width:0}
+#contact .form{position:relative;z-index:1;min-width:0;height:fit-content;overflow:hidden;margin:0}
+#contact .form-hint{overflow-wrap:anywhere}
+.footer{position:relative;z-index:0;clear:both;margin-top:0}
+.studio-signature{position:relative;clear:both;padding-top:0;margin-top:0}
+@media(max-width:680px){
+ .team-promise-grid{grid-template-columns:1fr;gap:0;margin-top:24px}
+ .team-promise{grid-template-columns:36px 1fr;padding:19px 0;gap:12px}
+ .team-promise h3{font-size:14px}
+ .team-promise p{font-size:11px}
+ #contact{padding-bottom:76px}
+ #contact .contact-grid{gap:28px}
+ #contact .form{width:100%}
+}
+
+
+/* Final spacing pass — consistent vertical rhythm and clean section boundaries */
+:root{--section-space:88px;--section-space-mobile:64px}
+html{scroll-padding-top:86px}
+.wrap{width:min(1160px,calc(100% - 48px))}
+.section{padding-block:var(--section-space)}
+.section-head{margin-bottom:36px}
+.section-head h2{margin:12px 0 13px;line-height:1.48}
+.section-head p{margin-bottom:0;max-width:650px}
+.hero{padding:72px 0 68px}
+.hero-grid{max-width:900px}
+.hero-copy>p{margin-bottom:0}
+.hero .micro{margin-top:22px}
+.proof{padding:22px 0}
+.proof-grid{gap:0}
+.proof-item{min-height:48px;padding-inline:12px}
+#about .about-copy{max-width:780px}
+#about .about-copy p{margin-bottom:15px}
+#about .signature{margin-top:23px}
+#services .services-head{align-items:flex-end;gap:28px}
+#services .section-head{margin-bottom:32px}
+#services .service-grid{gap:20px}
+#services .service{height:100%;display:flex;flex-direction:column}
+#services .service-body{display:flex;flex:1;flex-direction:column;align-items:flex-start}
+#services .service p{min-height:0;flex:1}
+#services .arrow-link{margin-top:12px}
+.manifesto-inner{min-height:0}
+#team .section-head{max-width:760px}
+.team-promise-grid{margin-top:30px}
+.team-promise{padding:22px 0}
+#team .sample-note{margin-bottom:0}
+.steps{row-gap:28px}
+.step p{margin-bottom:0}
+.gallery-section .section-head{margin-bottom:32px}
+.gallery-grid{gap:12px}
+.testimonials .quote{height:100%}
+.quote blockquote{margin-bottom:16px}
+#contact{padding:88px 0 82px!important;clear:both;overflow:visible}
+#contact .contact-grid{display:grid;align-items:start;gap:clamp(34px,7vw,84px)}
+#contact .contact-copy p{max-width:440px}
+#contact .contact-facts{gap:14px;margin-top:24px}
+#contact .form{height:auto;min-height:0;margin:0;align-self:start}
+#contact .form-hint{margin-bottom:0}
+.footer{margin:0;clear:both;padding:52px 0 22px}
+.footer-grid{padding-bottom:32px;row-gap:28px}
+.studio-signature{margin:0;clear:both;padding:0 0 40px}
+.studio-panel{row-gap:22px}
+@media(max-width:900px){
+ :root{--section-space:76px}
+ .proof-item{padding-inline:8px}
+ #services .services-head{align-items:flex-start}
+ #contact .contact-grid{gap:34px}
+}
+@media(max-width:680px){
+ :root{--section-space:var(--section-space-mobile)}
+ .wrap{width:calc(100% - 36px)}
+ .hero{padding:52px 0 48px}
+ .proof{padding:18px 0}
+ .proof-grid{column-gap:10px;row-gap:15px}
+ .proof-item{min-height:42px;padding:0;gap:9px}
+ .proof-item strong{font-size:11px}
+ .proof-item small{font-size:9px}
+ .section-head{margin-bottom:27px}
+ .section-head h2{margin:10px 0 11px}
+ #services .services-head{display:block}
+ #services .section-head{margin-bottom:24px}
+ #services .service-grid{gap:15px}
+ #services .service-body{padding:18px 18px 20px}
+ .team-promise-grid{margin-top:22px}
+ .team-promise{padding:18px 0}
+ .steps{row-gap:22px}
+ .gallery-grid{gap:8px}
+ #contact{padding:62px 0 58px!important}
+ #contact .contact-grid{grid-template-columns:minmax(0,1fr);gap:25px}
+ #contact .form{width:100%;padding:22px 17px}
+ .footer{padding:40px 0 20px}
+ .footer-grid{padding-bottom:26px;row-gap:23px}
+ .studio-signature{padding:0 0 28px}
+ .studio-panel{gap:16px;padding:22px 18px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* English-only LTR refinements */
+html[dir="ltr"] body{direction:ltr;text-align:left;font-family:Arial,Manrope,sans-serif;line-height:1.75}
+html[dir="ltr"] .hero h1,html[dir="ltr"] .section-head h2,html[dir="ltr"] .about-copy h2,html[dir="ltr"] .contact-copy h2{letter-spacing:-.8px;line-height:1.25}
+html[dir="ltr"] .hero-copy>p,html[dir="ltr"] .section-head p,html[dir="ltr"] .about-copy p,html[dir="ltr"] .contact-copy p,html[dir="ltr"] .manifesto p{line-height:1.9}
+html[dir="ltr"] .about-image{padding:0 27px 27px 0}html[dir="ltr"] .about-image:after{left:auto;right:0}
+html[dir="ltr"] .studio-copy{border-left:0;border-right:1px solid rgba(198,166,107,.22);padding:4px 0 4px 25px}
+html[dir="ltr"] .studio-bottomline a{font-family:Arial,sans-serif}html[dir="ltr"] .sample-note{border-right:0;border-left:2px solid var(--gold)}
+html[dir="ltr"] .faq-list summary{direction:ltr}html[dir="ltr"] .footer-bottom{direction:ltr}
+@media(max-width:680px){html[dir="ltr"] .about-image{padding:0 24px 24px 0}html[dir="ltr"] .studio-copy{border-right:0;border-top:1px solid rgba(198,166,107,.2);padding:17px 0 0}}
+
+/* Refined identity, language control and cinematic navigation */
+.logo.wordmark-logo{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:0;min-width:132px}
+.logo.wordmark-logo .logo-title{font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:500;line-height:1.05;letter-spacing:-.7px;color:#30362d;direction:ltr}
+.logo.wordmark-logo .logo-sub{font-family:'Manrope',Arial,sans-serif;font-size:8px;font-weight:400;letter-spacing:2.1px;line-height:1.7;color:#85877e;margin-top:5px;direction:ltr;white-space:nowrap}
+.language-menu{position:relative;z-index:42;direction:ltr}
+.language-menu details{position:relative}
+.language-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;min-width:82px;height:40px;padding:0 13px;border:1px solid #d8d2c5;background:#fff;color:#454b41;font-size:12px;font-weight:500;transition:background .25s,border-color .25s,color .25s}
+.language-menu summary::-webkit-details-marker{display:none}
+.language-menu summary:after{content:"";width:6px;height:6px;border-right:1px solid #8c806b;border-bottom:1px solid #8c806b;transform:rotate(45deg) translateY(-2px);transition:transform .3s}
+.language-menu details[open] summary{border-color:#b49a72;background:#fbfaf7}
+.language-menu details[open] summary:after{transform:rotate(225deg) translate(-2px,-1px)}
+.language-options{position:absolute;top:calc(100% + 9px);left:0;min-width:142px;padding:7px;background:#fff;border:1px solid #e9e5dc;box-shadow:0 18px 38px #25292318;display:grid;gap:2px;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transform-origin:top left;transition:opacity .28s ease,transform .38s cubic-bezier(.2,.75,.25,1),visibility 0s linear .38s}
+.language-menu details[open] .language-options{opacity:1;visibility:visible;transform:translateY(0) scale(1);transition-delay:0s}
+.language-options a,.language-options .current-language{display:block;padding:9px 11px;font-size:11px;color:#62665c;white-space:nowrap}
+.language-options a:hover{background:#f5f3ed;color:#343c31}
+.language-options .current-language{color:#59664f;background:#f7f7f3;font-weight:600}
+.hamb{transition:transform .45s cubic-bezier(.2,.8,.2,1),color .25s}
+.hamb[aria-expanded="true"]{transform:rotate(90deg);color:#9c8053}
+@media(max-width:680px){
+ .header{z-index:50}
+ .nav{position:relative}
+ .nav-cta{gap:9px}
+ .language-menu summary{min-width:74px;height:38px;padding:0 10px;font-size:11px}
+ .logo.wordmark-logo{min-width:0}
+ .logo.wordmark-logo .logo-title{font-size:27px}
+ .links{display:flex;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-15px) scale(.985);transform-origin:top center;transition:opacity .34s ease,transform .48s cubic-bezier(.2,.8,.2,1),visibility 0s linear .48s;max-height:calc(100dvh - 82px);overflow-y:auto}
+ .links.open{display:flex;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0) scale(1);transition-delay:0s}
+ .links a{opacity:0;transform:translateY(-7px);transition:opacity .28s ease,transform .38s cubic-bezier(.2,.8,.2,1)}
+ .links.open a{opacity:1;transform:translateY(0)}
+ .links.open a:nth-child(1){transition-delay:.04s}.links.open a:nth-child(2){transition-delay:.08s}.links.open a:nth-child(3){transition-delay:.12s}.links.open a:nth-child(4){transition-delay:.16s}.links.open a:nth-child(5){transition-delay:.20s}
+}
+@media(prefers-reduced-motion:reduce){.links,.links a,.hamb,.language-options,.language-menu summary:after{transition:none!important;transform:none!important}}
+
+/* English clinic environment image alignment: consistent editorial grid */
+.gallery-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;grid-template-rows:220px 220px;gap:12px;align-items:stretch;min-width:0}
+.gallery-grid img{display:block;width:100%;height:100%;min-width:0;min-height:0;max-height:100%;object-fit:cover;object-position:center}
+.gallery-grid img:first-child{grid-row:span 2;grid-column:1;}
+.gallery-grid img:last-child{grid-column:2/4;grid-row:2;}
+@media(max-width:900px){.gallery-grid{grid-template-rows:190px 190px;gap:10px}}
+@media(max-width:680px){.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 140px 140px;gap:8px}.gallery-grid img:first-child{grid-column:1;grid-row:1/3}.gallery-grid img:last-child{grid-column:1/3;grid-row:3}}
+
 </style>
 </head>
 <body>
@@ -326,8 +633,7 @@ html[dir="ltr"] .faq-list summary{direction:ltr}html[dir="ltr"] .footer-bottom{d
 </div></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid">
-<div class="hero-copy reveal"><div class="kicker">SKIN & BEAUTY CLINIC</div><h1>Your beauty,<br>in balance.</h1><p>At Élan, you never need to look like someone else. We get to know your skin and help you make informed choices with care tailored to you — thoughtfully, calmly and respectfully.</p><div class="actions"><a class="btn" href="#contact">Book a consultation <span>↗</span></a><a class="btn btn-outline" href="#services">Explore services</a></div><div class="micro">Natural beauty. Informed choices. Responsible care.</div></div>
-<div class="hero-photo reveal"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1100&q=85" alt="Bright, calm clinic interior"></div><div class="photo-note"><strong>Every skin has its own story</strong>Choices made for you</div></div>
+<div class="hero-copy reveal"><div class="kicker">SKIN &amp; BEAUTY CLINIC</div><h1>Skin &amp; beauty clinic <em>Élan</em></h1><p>At Élan, you never need to look like someone else. We get to know your skin and help you make informed choices with care tailored to you — thoughtfully, calmly and respectfully.</p><div class="micro">Natural beauty. Informed choices. Responsible care.</div></div>
 </div></section>
 <section class="proof"><div class="wrap proof-grid">
 <div class="proof-item"><span class="proof-icon">✧</span><div><strong>Personal consultation</strong><small>Based on your needs</small></div></div>
@@ -336,33 +642,32 @@ html[dir="ltr"] .faq-list summary{direction:ltr}html[dir="ltr"] .footer-bottom{d
 <div class="proof-item"><span class="proof-icon">◇</span><div><strong>Ongoing support</strong><small>From consultation to care</small></div></div>
 </div></section>
 <section class="section" id="about"><div class="wrap about-grid">
-<div class="about-image reveal"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Calm minimalist interior design"></div>
-<div class="about-copy reveal"><div class="kicker">OUR APPROACH</div><h2>First, we get to know you;<br>Then, we guide the way.</h2><p>Effective care begins by understanding each person rather than applying a one-size-fits-all approach. At Élan, your skin, lifestyle and expectations are considered alongside a qualified professional’s assessment.</p><p>We believe in being transparent about methods, benefits and limitations. Our goal is a thoughtful choice that suits you — never exaggerated promises or unrealistic results.</p><div class="signature"><span>Élan</span><div><b>Beauty, thoughtfully</b><small>THE ÉLAN APPROACH</small></div></div></div>
+<div class="about-copy reveal"><div class="kicker">OUR APPROACH</div><h2>First, we get to know you;<br>then, we guide the way.</h2><p>Effective care begins by understanding each person rather than applying a one-size-fits-all approach. At Élan, your skin, lifestyle and expectations are considered alongside a qualified professional’s assessment.</p><p>We believe in being transparent about methods, benefits and limitations. Our goal is a thoughtful choice that suits you — never exaggerated promises or unrealistic results.</p><div class="signature"><span>Élan</span><div><b>Beauty, thoughtfully</b><small>THE ÉLAN APPROACH</small></div></div></div>
 </div></section>
 <section class="section services" id="services"><div class="wrap">
 <div class="services-head"><div class="section-head reveal"><div class="kicker">OUR SERVICES</div><h2>Care that begins with understanding.</h2><p>The services below demonstrate a sample clinic layout. Final service descriptions must be reviewed against the clinic’s actual facilities, authorizations and professional guidance.</p></div><a class="arrow-link" href="#contact">Need help choosing a service? <b>←</b></a></div>
 <div class="service-grid">
-<article class="service reveal"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=85" alt="Skin care products"><div class="service-body"><div class="service-no">01 / SKIN HEALTH</div><h3>Skin assessment & care</h3><p>Understand your skin and choose a daily care routine that fits your needs.</p><a class="arrow-link" href="#contact">Get advice <b>←</b></a></div></article>
-<article class="service reveal"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=85" alt="Aesthetic care equipment"><div class="service-body"><div class="service-no">02 / AESTHETIC CARE</div><h3>Aesthetic & rejuvenation services</h3><p>Explore options suited to your individual needs, with informed decisions at the centre.</p><a class="arrow-link" href="#contact">Get advice <b>←</b></a></div></article>
-<article class="service reveal"><img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=800&q=85" alt="Skin care products"><div class="service-body"><div class="service-no">03 / PERSONAL CARE</div><h3>Personalised care plan</h3><p>Guidance on products and care habits suited to your skin.</p><a class="arrow-link" href="#contact">Get advice <b>←</b></a></div></article>
+<article class="service reveal"><img src="https://images.pexels.com/photos/6899553/pexels-photo-6899553.jpeg?cs=srgb&dl=pexels-artbovich-6899553.jpg&fm=jpg" alt="Skincare products in a beauty clinic" loading="lazy" decoding="async"><div class="service-body"><div class="service-no">01 / SKIN HEALTH</div><h3>Skin assessment & care</h3><p>Understand your skin and choose a daily care routine that fits your needs.</p><a class="arrow-link" href="#contact">Get advice <b>←</b></a></div></article>
+<article class="service reveal"><img src="https://images.pexels.com/photos/3736279/pexels-photo-3736279.jpeg?cs=srgb&dl=pexels-polina-tankilevitch-3736279.jpg&fm=jpg" alt="Professional skincare equipment" loading="lazy" decoding="async"><div class="service-body"><div class="service-no">02 / AESTHETIC CARE</div><h3>Aesthetic & rejuvenation services</h3><p>Explore options suited to your individual needs, with informed decisions at the centre.</p><a class="arrow-link" href="#contact">Get advice <b>←</b></a></div></article>
+<article class="service reveal"><img src="https://images.pexels.com/photos/6899554/pexels-photo-6899554.jpeg?cs=srgb&dl=pexels-artbovich-6899554.jpg&fm=jpg" alt="A calm treatment room prepared for skincare" loading="lazy" decoding="async"><div class="service-body"><div class="service-no">03 / PERSONAL CARE</div><h3>Personalised care plan</h3><p>Guidance on products and care habits suited to your skin.</p><a class="arrow-link" href="#contact">Get advice <b>←</b></a></div></article>
 </div></div></section>
 <section class="section"><div class="wrap manifesto reveal"><div class="manifesto-inner">
 <div><div class="kicker">OUR BELIEF</div><h2>No impossible promises.<br>Just thoughtful care.</h2><p>Every person is different. We avoid guarantees and focus on professional assessment, clear information and responsible care.</p></div>
 <div class="values"><div class="value"><b>01</b><strong>Listen & understand</strong><small>Understand needs and expectations before deciding</small></div><div class="value"><b>02</b><strong>Clear choices</strong><small>Explain options and limitations</small></div><div class="value"><b>03</b><strong>Expertise & precision</strong><small>Assessment by a qualified professional</small></div><div class="value"><b>04</b><strong>Support & follow-up</strong><small>Guidance for aftercare</small></div></div>
 </div></div></section>
-<section class="section" id="team"><div class="wrap"><div class="section-head reveal"><div class="kicker">THE ÉLAN TEAM</div><h2>Trust is built on expertise.</h2><p>Team profiles should be completed with verified names, photographs, qualifications and professional experience.</p></div>
-<div class="team-grid">
-<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=85" alt="Placeholder portrait of a male doctor" loading="lazy"><span class="person-index">01</span></div><h3>Dermatologist</h3><p>Sample profile. Replace with the real doctor's verified details.</p></article>
-<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85" alt="Placeholder portrait of a doctor in a clinical setting" loading="lazy"><span class="person-index">02</span></div><h3>Consulting physician</h3><p>Sample profile. Add the verified specialty and professional details.</p></article>
-<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85" alt="Placeholder portrait of a female doctor" loading="lazy"><span class="person-index">03</span></div><h3>Skin care specialist</h3><p>Sample profile. Replace with an authorised image and verified credentials.</p></article>
-<article class="person reveal"><div class="person-photo"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=85" alt="Placeholder doctor portrait in a clinical setting" loading="lazy"><span class="person-index">04</span></div><h3>Associate physician</h3><p>Sample profile. Add verified name, image, specialty and experience.</p></article>
-</div><p class="sample-note">These are placeholder photographs, not actual clinic staff. Replace all names, images, specialties and biographies with verified, authorised information.</p>
+<section class="section" id="team"><div class="wrap"><div class="section-head reveal"><div class="kicker">THE ÉLAN TEAM</div><h2>Expertise, experience and care you can trust.</h2><p>At Élan, skin care is shaped by professional insight, careful assessment and attention to each visitor’s individual needs.</p></div>
+<div class="team-promise-grid">
+<article class="team-promise reveal"><span class="team-promise-no">01</span><div><h3>Experience backed by expertise</h3><p>A medically informed approach grounded in clinical experience, with methods selected to suit each individual and their needs.</p></div></article>
+<article class="team-promise reveal"><span class="team-promise-no">02</span><div><h3>Assessment before every decision</h3><p>No care plan begins without understanding your needs, assessing your skin and discussing expectations clearly.</p></div></article>
+<article class="team-promise reveal"><span class="team-promise-no">03</span><div><h3>Honest and transparent guidance</h3><p>Benefits, limitations and aftercare are explained clearly — without exaggerated claims or guaranteed outcomes.</p></div></article>
+<article class="team-promise reveal"><span class="team-promise-no">04</span><div><h3>Thoughtful follow-up and support</h3><p>Care does not end when an appointment does; guidance and follow-up remain part of a responsible care journey.</p></div></article>
+</div><p class="sample-note">Before launch, add verified physician names, specialties and professional credentials.</p>
 </div></section>
 <section class="section steps-section" id="journey"><div class="wrap"><div class="section-head reveal"><div class="kicker">Your Visit</div><h2>From first contact to ongoing care</h2><p>A clear journey, so you know what to expect at every step.</p></div>
 <div class="steps"><div class="step reveal"><b>01</b><h3>Make a request</h3><p>Tell us when you would like to be contacted.</p></div><div class="step reveal"><b>02</b><h3>Initial conversation</h3><p>We listen to your needs and answer your initial questions.</p></div><div class="step reveal"><b>03</b><h3>Professional assessment</h3><p>A specialist reviews your needs and explains possible options.</p></div><div class="step reveal"><b>04</b><h3>Care & follow-up</h3><p>The agreed plan is followed with appropriate guidance.</p></div></div>
 </div></section>
 <section class="section gallery-section"><div class="wrap"><div class="section-head reveal"><div class="kicker">THE CLINIC</div><h2>Details for a calmer experience</h2><p>A bright, calm and welcoming space where your experience begins with thoughtful attention.</p></div>
-<div class="gallery-grid reveal"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=85" alt="فضای داخلی کلینیک"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85" alt="فضای مینیمال"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=85" alt="جزئیات دکوراسیون"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85" alt="فضای پذیرش"></div>
+<div class="gallery-grid reveal"><img src="https://images.pexels.com/photos/11024139/pexels-photo-11024139.jpeg?cs=srgb&dl=pexels-mike-giovinazzo-172084658-11024139.jpg&fm=jpg" alt="Modern aesthetic clinic interior" loading="lazy" decoding="async"><img src="https://images.pexels.com/photos/6899549/pexels-photo-6899549.jpeg?cs=srgb&dl=pexels-artbovich-6899549.jpg&fm=jpg" alt="Minimal beauty treatment room" loading="lazy" decoding="async"><img src="https://images.pexels.com/photos/7016405/pexels-photo-7016405.jpeg?cs=srgb&dl=pexels-enis-mekic-32565588-7016405.jpg&fm=jpg" alt="Clean medical consultation room" loading="lazy" decoding="async"><img src="https://images.pexels.com/photos/31844508/pexels-photo-31844508.jpeg?cs=srgb&dl=pexels-drharorswellness-31844508.jpg&fm=jpg" alt="Contemporary clinic reception" loading="lazy" decoding="async"></div>
 </div></section>
 <section class="section testimonials"><div class="wrap"><div class="section-head reveal"><div class="kicker">CLIENT EXPERIENCES</div><h2>Trust is the most valuable experience.</h2><p>This section is reserved for genuine client feedback shared with permission.</p></div>
 <div class="quotes"><div class="quote reveal"><div class="stars">★★★★★</div><blockquote>This section is reserved for genuine client feedback about consultations and service.</blockquote><small>Placeholder — replace with approved, genuine feedback</small></div><div class="quote reveal"><div class="stars">★★★★★</div><blockquote>Genuine feedback will be published only with the author's permission and without misleading edits.</blockquote><small>Placeholder — replace with approved, genuine feedback</small></div><div class="quote reveal"><div class="stars">★★★★★</div><blockquote>Fictional reviews or ratings must never be presented as genuine client experiences.</blockquote><small>CONTENT NOTE</small></div></div>
@@ -381,7 +686,7 @@ html[dir="ltr"] .faq-list summary{direction:ltr}html[dir="ltr"] .footer-bottom{d
 <div><h4>SOCIAL MEDIA</h4><div class="footer-links"><a href="#contact">Clinic Instagram — add official link</a><a href="#contact">Contact — add verified details</a></div></div>
 </div><div class="footer-bottom"><span>© 2026 Élan Clinic · All rights reserved</span><a href="#home">Back to top ↑</a></div></div></footer>
 
-<section class="studio-signature" aria-label="طراحی و توسعه توسط AmirStudio">
+<section class="studio-signature" aria-label="Designed and developed by AmirStudio">
   <div class="wrap">
     <div class="studio-panel">
       <div class="studio-brand-row">
@@ -412,7 +717,7 @@ const hamb=document.getElementById('hamb'),links=document.getElementById('links'
 const closeMenu=()=>{if(!hamb||!links)return;links.classList.remove('open');hamb.setAttribute('aria-expanded','false');hamb.textContent='☰';document.body.classList.remove('lock')};
 if(hamb&&links){hamb.addEventListener('click',()=>{const open=!links.classList.contains('open');links.classList.toggle('open',open);hamb.setAttribute('aria-expanded',String(open));hamb.textContent=open?'×':'☰';document.body.classList.toggle('lock',open)});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();document.querySelectorAll('.language-menu details[open]').forEach(d=>d.open=false)}});document.addEventListener('click',e=>{if(!e.target.closest('.language-menu'))document.querySelectorAll('.language-menu details[open]').forEach(d=>d.open=false);if(!e.target.closest('.nav')&&links.classList.contains('open'))closeMenu()});}
 if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el))}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'))}
-document.getElementById('booking').addEventListener('submit',e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;const s=document.getElementById('status');s.textContent='درخواست شما در این نسخه نمایشی ثبت نمی‌شود؛ برای دریافت واقعی اطلاعات باید سامانه رزرو متصل شود.';s.style.display='block';e.currentTarget.reset()});
+document.getElementById('booking').addEventListener('submit',e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;const s=document.getElementById('status');s.textContent='This demo does not submit requests. A booking system must be connected to receive real enquiries.';s.style.display='block';e.currentTarget.reset()});
 </script>
 </body>
 </html>
