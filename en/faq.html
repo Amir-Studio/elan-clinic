@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>FAQ | Élan Clinic</title>
 <style>
+
 :root{--paper:#f4f0e8;--paper2:#ebe6dc;--white:#fffdf8;--ink:#292c26;--muted:#77796f;--olive:#59664f;--olive2:#78836c;--gold:#b69b70;--line:#dcd6ca;--serif:'Playfair Display',Georgia,serif;--fa:'Vazirmatn',sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--fa);line-height:1.9}body.lock{overflow:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,calc(100% - 52px));margin:auto}.announcement{background:var(--ink);color:#e9e2d5;text-align:center;padding:7px 15px;font-size:10px;letter-spacing:.2px}.announcement b{color:#d9c19a;font-weight:500}.header{height:82px;position:sticky;top:0;z-index:30;background:#f4f0e8ed;backdrop-filter:blur(14px);border-bottom:1px solid #292c2610}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:11px}.logo-symbol{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font:25px var(--serif);color:var(--olive)}.logo-title{font-size:17px;font-weight:600;letter-spacing:1px}.logo-sub{display:block;font:9px var(--serif);direction:ltr;letter-spacing:2.3px;color:var(--muted);margin-top:-4px}.links{display:flex;align-items:center;gap:27px;font-size:12px;color:#5e6058}.links a:hover{color:var(--olive)}.nav-cta{display:flex;align-items:center;gap:15px}.phone{direction:ltr;font:12px Arial;color:#62665c}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:13px 22px;background:var(--olive);border:1px solid var(--olive);color:white;font-size:12px;transition:.25s}.btn:hover{background:#414c3c;transform:translateY(-2px)}.btn-outline{background:transparent;color:var(--ink);border-color:#aaa99d}.btn-outline:hover{color:white}.hamb{display:none;border:0;background:none;font-size:24px;color:var(--ink)}
 .hero{padding:46px 0 88px}.hero-grid{display:grid;grid-template-columns:1fr 1.03fr;gap:7%;align-items:center;min-height:570px}.kicker{font-size:10px;color:var(--olive);font-weight:600;letter-spacing:1.7px;display:flex;align-items:center;gap:12px}.kicker:before{content:"";width:30px;height:1px;background:var(--gold)}h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(42px,5.2vw,69px);font-weight:300;line-height:1.45;letter-spacing:-2px;margin:22px 0 17px}.hero h1 em{font:italic 1.02em var(--serif);color:var(--olive);direction:ltr;display:inline-block}.hero-copy>p{font-size:14px;color:var(--muted);max-width:455px;line-height:2.25}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:27px}.micro{margin-top:35px;color:var(--muted);font-size:10px;display:flex;align-items:center;gap:12px}.micro:before{content:"";width:27px;height:1px;background:var(--gold)}.hero-photo{height:555px;position:relative}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:48% 48% 3px 3px}.photo-note{position:absolute;bottom:27px;left:-25px;background:var(--white);padding:15px 20px;box-shadow:0 12px 32px #24251d12;font-size:10px;color:var(--muted)}.photo-note strong{display:block;color:var(--ink);font-size:12px;font-weight:500}.seal{position:absolute;right:-31px;bottom:38px;width:105px;height:105px;border-radius:50%;background:var(--white);border:1px solid var(--line);display:grid;place-items:center;text-align:center;color:var(--olive);font-size:9px;line-height:1.7}.seal b{display:block;font:29px var(--serif)}
@@ -313,6 +314,128 @@ html[dir="ltr"] .faq-list summary{direction:ltr}html[dir="ltr"] .footer-bottom{d
  .links.open a:nth-child(1){transition-delay:.04s}.links.open a:nth-child(2){transition-delay:.08s}.links.open a:nth-child(3){transition-delay:.12s}.links.open a:nth-child(4){transition-delay:.16s}.links.open a:nth-child(5){transition-delay:.20s}
 }
 @media(prefers-reduced-motion:reduce){.links,.links a,.hamb,.language-options,.language-menu summary:after{transition:none!important;transform:none!important}}
+
+/* Shared final layout refinements from the Persian FAQ page */
+/* Refined identity, language control and cinematic navigation */
+.logo.wordmark-logo{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:0;min-width:132px}
+.logo.wordmark-logo .logo-title{font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:500;line-height:1.05;letter-spacing:-.7px;color:#30362d;direction:ltr}
+.logo.wordmark-logo .logo-sub{font-family:'Vazirmatn',sans-serif;font-size:9px;font-weight:400;letter-spacing:0;line-height:1.7;color:#85877e;margin-top:5px;direction:rtl;white-space:nowrap}
+.language-menu{position:relative;z-index:42;direction:rtl}
+.language-menu details{position:relative}
+.language-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;min-width:82px;height:40px;padding:0 13px;border:1px solid #d8d2c5;background:#fff;color:#454b41;font-size:12px;font-weight:500;transition:background .25s,border-color .25s,color .25s}
+.language-menu summary::-webkit-details-marker{display:none}
+.language-menu summary:after{content:"";width:6px;height:6px;border-right:1px solid #8c806b;border-bottom:1px solid #8c806b;transform:rotate(45deg) translateY(-2px);transition:transform .3s}
+.language-menu details[open] summary{border-color:#b49a72;background:#fbfaf7}
+.language-menu details[open] summary:after{transform:rotate(225deg) translate(-2px,-1px)}
+.language-options{position:absolute;top:calc(100% + 9px);right:0;min-width:142px;padding:7px;background:#fff;border:1px solid #e9e5dc;box-shadow:0 18px 38px #25292318;display:grid;gap:2px;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transform-origin:top right;transition:opacity .28s ease,transform .38s cubic-bezier(.2,.75,.25,1),visibility 0s linear .38s}
+.language-menu details[open] .language-options{opacity:1;visibility:visible;transform:translateY(0) scale(1);transition-delay:0s}
+.language-options a,.language-options .current-language{display:block;padding:9px 11px;font-size:11px;color:#62665c;white-space:nowrap}
+.language-options a:hover{background:#f5f3ed;color:#343c31}
+.language-options .current-language{color:#59664f;background:#f7f7f3;font-weight:600}
+.hamb{transition:transform .45s cubic-bezier(.2,.8,.2,1),color .25s}
+.hamb[aria-expanded="true"]{transform:rotate(90deg);color:#9c8053}
+@media(max-width:680px){
+ .header{z-index:50}
+ .nav{position:relative}
+ .nav-cta{gap:9px}
+ .language-menu summary{min-width:74px;height:38px;padding:0 10px;font-size:11px}
+ .logo.wordmark-logo{min-width:0}
+ .logo.wordmark-logo .logo-title{font-size:27px}
+ .links{display:flex;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-15px) scale(.985);transform-origin:top center;transition:opacity .34s ease,transform .48s cubic-bezier(.2,.8,.2,1),visibility 0s linear .48s;max-height:calc(100dvh - 82px);overflow-y:auto}
+ .links.open{display:flex;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0) scale(1);transition-delay:0s}
+ .links a{opacity:0;transform:translateY(-7px);transition:opacity .28s ease,transform .38s cubic-bezier(.2,.8,.2,1)}
+ .links.open a{opacity:1;transform:translateY(0)}
+ .links.open a:nth-child(1){transition-delay:.04s}.links.open a:nth-child(2){transition-delay:.08s}.links.open a:nth-child(3){transition-delay:.12s}.links.open a:nth-child(4){transition-delay:.16s}.links.open a:nth-child(5){transition-delay:.20s}
+}
+@media(prefers-reduced-motion:reduce){.links,.links a,.hamb,.language-options,.language-menu summary:after{transition:none!important;transform:none!important}}
+
+/* Persian layout refinement */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{overflow-x:hidden}
+.wrap{width:min(1160px,calc(100% - 48px));margin-inline:auto}
+.hero{padding:clamp(58px,8vw,104px) 0 clamp(55px,7vw,88px)}
+.hero-grid{display:block;min-height:0;max-width:900px;margin-inline:auto}
+.hero-copy{text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero-copy .kicker{justify-content:center}
+.hero h1{font-size:clamp(32px,4.2vw,54px);line-height:1.35;letter-spacing:-1.2px;margin:18px 0 20px;white-space:normal;text-wrap:balance}
+.hero h1 em{font-style:normal;font-family:'Playfair Display',Georgia,serif;font-weight:500;white-space:nowrap}
+.hero-copy>p{max-width:680px;margin-inline:auto;line-height:2.15}
+.hero .actions{justify-content:center;margin-top:22px}
+.hero .micro{justify-content:center;margin-top:26px}
+.about-grid{grid-template-columns:minmax(0,1fr);gap:0;max-width:850px;margin-inline:auto}
+.about-copy{max-width:760px}
+.about-copy h2,.about-copy p{text-wrap:pretty}
+.nav-booking{display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;padding:10px 15px;background:var(--olive);color:#fff;border:1px solid var(--olive);font-size:11px;transition:background .35s ease,transform .45s cubic-bezier(.2,.8,.2,1)}
+.nav-booking:hover{background:#414c3c;transform:translateY(-2px)}
+.links{gap:clamp(12px,1.6vw,22px)}
+.links a{transition:color .3s ease}
+.reveal{transition:opacity .85s ease,transform .95s cubic-bezier(.2,.75,.25,1)}
+.btn,.nav-booking,.language-menu summary{transition:all .35s cubic-bezier(.2,.75,.25,1)}
+@media(max-width:900px){.nav-booking{padding:9px 11px;font-size:10px}.links{gap:12px}.hero h1{font-size:clamp(32px,5vw,46px)}}
+@media(max-width:680px){
+ .wrap{width:calc(100% - 36px)}
+ .hero{padding:54px 0 58px}
+ .hero-grid{min-height:0}
+ .hero h1{font-size:clamp(30px,8vw,39px);line-height:1.45;letter-spacing:-.7px}
+ .hero-copy>p{font-size:12px}
+ .nav-booking{justify-content:center;margin-top:12px;padding:13px 12px;border:0;border-top:1px solid var(--line);background:transparent;color:var(--olive);font-size:12px}
+ .links.open{gap:0}
+ .links.open a,.links.open .nav-booking{opacity:1;transform:translateY(0)}
+ .about-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.btn,.nav-booking{transition:none!important}}
+
+.faq-jump{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 42px;padding:16px 0;border-bottom:1px solid #e8e9e2}
+.faq-jump a{display:inline-flex;align-items:center;padding:8px 13px;border:1px solid #e5e6df;background:#fff;color:#59664f;font-size:11px;transition:background .25s,border-color .25s,color .25s}
+.faq-jump a:hover{background:#f4f5f0;border-color:#c9cdbf}
+.faq-category{scroll-margin-top:105px}
+@media(max-width:680px){.faq-jump{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:28px}.faq-jump a{justify-content:center;text-align:center;padding:9px 7px;font-size:10px}}
+
+
+/* English-only LTR refinements */
+html[dir="ltr"] body{direction:ltr;text-align:left;font-family:Arial,Manrope,sans-serif;line-height:1.75}
+html[dir="ltr"] .hero h1,html[dir="ltr"] .section-head h2,html[dir="ltr"] .about-copy h2,html[dir="ltr"] .contact-copy h2{letter-spacing:-.8px;line-height:1.25}
+html[dir="ltr"] .hero-copy>p,html[dir="ltr"] .section-head p,html[dir="ltr"] .about-copy p,html[dir="ltr"] .contact-copy p,html[dir="ltr"] .manifesto p{line-height:1.9}
+html[dir="ltr"] .about-image{padding:0 27px 27px 0}html[dir="ltr"] .about-image:after{left:auto;right:0}
+html[dir="ltr"] .studio-copy{border-left:0;border-right:1px solid rgba(198,166,107,.22);padding:4px 0 4px 25px}
+html[dir="ltr"] .studio-bottomline a{font-family:Arial,sans-serif}html[dir="ltr"] .sample-note{border-right:0;border-left:2px solid var(--gold)}
+html[dir="ltr"] .faq-list summary{direction:ltr}html[dir="ltr"] .footer-bottom{direction:ltr}
+@media(max-width:680px){html[dir="ltr"] .about-image{padding:0 24px 24px 0}html[dir="ltr"] .studio-copy{border-right:0;border-top:1px solid rgba(198,166,107,.2);padding:17px 0 0}}
+
+/* Refined identity, language control and cinematic navigation */
+.logo.wordmark-logo{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:0;min-width:132px}
+.logo.wordmark-logo .logo-title{font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:500;line-height:1.05;letter-spacing:-.7px;color:#30362d;direction:ltr}
+.logo.wordmark-logo .logo-sub{font-family:'Manrope',Arial,sans-serif;font-size:8px;font-weight:400;letter-spacing:2.1px;line-height:1.7;color:#85877e;margin-top:5px;direction:ltr;white-space:nowrap}
+.language-menu{position:relative;z-index:42;direction:ltr}
+.language-menu details{position:relative}
+.language-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;min-width:82px;height:40px;padding:0 13px;border:1px solid #d8d2c5;background:#fff;color:#454b41;font-size:12px;font-weight:500;transition:background .25s,border-color .25s,color .25s}
+.language-menu summary::-webkit-details-marker{display:none}
+.language-menu summary:after{content:"";width:6px;height:6px;border-right:1px solid #8c806b;border-bottom:1px solid #8c806b;transform:rotate(45deg) translateY(-2px);transition:transform .3s}
+.language-menu details[open] summary{border-color:#b49a72;background:#fbfaf7}
+.language-menu details[open] summary:after{transform:rotate(225deg) translate(-2px,-1px)}
+.language-options{position:absolute;top:calc(100% + 9px);left:0;min-width:142px;padding:7px;background:#fff;border:1px solid #e9e5dc;box-shadow:0 18px 38px #25292318;display:grid;gap:2px;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transform-origin:top left;transition:opacity .28s ease,transform .38s cubic-bezier(.2,.75,.25,1),visibility 0s linear .38s}
+.language-menu details[open] .language-options{opacity:1;visibility:visible;transform:translateY(0) scale(1);transition-delay:0s}
+.language-options a,.language-options .current-language{display:block;padding:9px 11px;font-size:11px;color:#62665c;white-space:nowrap}
+.language-options a:hover{background:#f5f3ed;color:#343c31}
+.language-options .current-language{color:#59664f;background:#f7f7f3;font-weight:600}
+.hamb{transition:transform .45s cubic-bezier(.2,.8,.2,1),color .25s}
+.hamb[aria-expanded="true"]{transform:rotate(90deg);color:#9c8053}
+@media(max-width:680px){
+ .header{z-index:50}
+ .nav{position:relative}
+ .nav-cta{gap:9px}
+ .language-menu summary{min-width:74px;height:38px;padding:0 10px;font-size:11px}
+ .logo.wordmark-logo{min-width:0}
+ .logo.wordmark-logo .logo-title{font-size:27px}
+ .links{display:flex;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-15px) scale(.985);transform-origin:top center;transition:opacity .34s ease,transform .48s cubic-bezier(.2,.8,.2,1),visibility 0s linear .48s;max-height:calc(100dvh - 82px);overflow-y:auto}
+ .links.open{display:flex;visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0) scale(1);transition-delay:0s}
+ .links a{opacity:0;transform:translateY(-7px);transition:opacity .28s ease,transform .38s cubic-bezier(.2,.8,.2,1)}
+ .links.open a{opacity:1;transform:translateY(0)}
+ .links.open a:nth-child(1){transition-delay:.04s}.links.open a:nth-child(2){transition-delay:.08s}.links.open a:nth-child(3){transition-delay:.12s}.links.open a:nth-child(4){transition-delay:.16s}.links.open a:nth-child(5){transition-delay:.20s}
+}
+@media(prefers-reduced-motion:reduce){.links,.links a,.hamb,.language-options,.language-menu summary:after{transition:none!important;transform:none!important}}
+
 </style></head>
 <body>
 <div class="announcement">Thoughtful care, tailored to you</div>
